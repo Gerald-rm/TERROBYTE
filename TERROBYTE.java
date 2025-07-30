@@ -12,17 +12,22 @@ public class TERROBYTE {
             System.out.println("4.- Crear Proyecto");
             System.out.println("5.- Crear Tablero Kanban");
             System.out.println("6.- Salir del programa");
+        
             opcion = sc.nextInt(); 
             sc.nextLine();
 
             switch(opcion){
-                case 1 : //crearperfil();
+                case 1 : 
+                crearperfiles misperfiles = new crearperfiles();
+                misperfiles.crearnuevoPerfil();
                     break;
                 case 2: //crearusuario();
                     break;
                 case 3 :// crearequipo();
                     break;
-                case 4: crearproyecto(sc);
+                case 4:
+                crearproyecto miProyecto = new crearproyecto();
+                    miProyecto.main(args);
                     break;
                 case 5: //creartablero();
                     break;
