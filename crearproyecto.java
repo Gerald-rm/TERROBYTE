@@ -7,8 +7,9 @@ public static void main(String[] args) {
     System.out.println("ingresa el Nombre del proyecto");
     String Nombrepro = sc.nextLine();
     System.out.println("quieres asignar miembros?");
-    System.out.println("1: Si");
-    System.out.println("2: No");
+    System.out.println("1 = Si");
+    System.out.println("2 = No");
+
     int opcion= sc.nextInt();
 
     if (opcion == 1) {
