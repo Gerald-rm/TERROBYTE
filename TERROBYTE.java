@@ -21,7 +21,7 @@ public class TERROBYTE {
                 crearperfiles misperfiles = new crearperfiles();
                 misperfiles.crearnuevoPerfil();
                     break;
-                case 2: //crearusuario();
+                case 2: ///crearusuario();
                     break;
                 case 3 :// crearequipo();
                     break;
