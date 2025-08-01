@@ -13,11 +13,18 @@ public class TERROBYTE {
         System.out.println("        \\|__|   \\|_______| \\|__|\\|__| \\|__|\\|__| \\|_______| \\|_______||\\___/ /             \\|__|   \\|_______|    ");
         System.out.println("                                                                      \\|___|/                                     ");
         System.out.println();
-         System.out.println();
-        System.out.println("┳┓   ┳┓┳┓┏┓┏┓┳┳┓┏┳┓┏┓┏┓┳┳┓");
-        System.out.println("┣┫┓┏•┃┃┣┫┣ ┣┫┃┃┃ ┃ ┣ ┣┫┃┃┃");
-        System.out.println("┻┛┗┫•┻┛┛┗┗┛┛┗┛ ┗ ┻ ┗┛┛┗┛ ┗");
-        System.out.println("   ┛");
+        System.out.println();
+        System.out.println("   ___         _   ___   ___   ____ ___    __  ___  ______ ____ ___    __  ___");
+        System.out.println("  / _ ) __ __ (_) / _ \\ / _ \\ / __// _ |  /  |/  / /_  __// __// _ |  /  |/  /");
+        System.out.println(" / _  |/ // /_   / // // , _// _/ / __ | / /|_/ /   / /  / _/ / __ | / /|_/ / ");
+        System.out.println("/____/ \\_, /(_) /____//_/|_|/___//_/ |_|/_/  /_/   /_/  /___//_/ |_|/_/  /_/  ");
+        System.out.println("      /___/                                                                   ");
+        System.out.println("================================================================================================================================");
+        sc.nextLine();
+        
+
+    
+
 
         do {
             System.out.println("1.- Crear Perfil");
