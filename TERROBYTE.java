@@ -13,7 +13,11 @@ public class TERROBYTE {
         System.out.println("        \\|__|   \\|_______| \\|__|\\|__| \\|__|\\|__| \\|_______| \\|_______||\\___/ /             \\|__|   \\|_______|    ");
         System.out.println("                                                                      \\|___|/                                     ");
         System.out.println();
-        System.out.println("                                   by: drimtim");
+         System.out.println();
+        System.out.println("┳┓   ┳┓┳┓┏┓┏┓┳┳┓┏┳┓┏┓┏┓┳┳┓");
+        System.out.println("┣┫┓┏•┃┃┣┫┣ ┣┫┃┃┃ ┃ ┣ ┣┫┃┃┃");
+        System.out.println("┻┛┗┫•┻┛┛┗┗┛┛┗┛ ┗ ┻ ┗┛┛┗┛ ┗");
+        System.out.println("   ┛");
 
         do {
             System.out.println("1.- Crear Perfil");
