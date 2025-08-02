@@ -22,7 +22,7 @@ public class TERROBYTE {
         System.out.println("      /___/                                                                   ");
         System.out.println("================================================================================================================================");
         sc.nextLine();
-        
+
         do {
             System.out.println("\n=============Inicio=============");
             System.out.println("1.- Crear Perfil");
