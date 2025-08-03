@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class TERROBYTE {
     public static void main(String[] args) {
@@ -18,11 +19,12 @@ public class TERROBYTE {
         System.out.println();
         System.out.println();
         System.out.println("   ___         _   ___   ___   ____ ___    __  ___  ______ ____ ___    __  ___");
-        System.out.println("  / _ ) __ __ (_) / _ \\ / _ \\ / __// _ |  /  |/  / /_  __// __// _ |  /  |/  /");
-        System.out.println(" / _  |/ // /_   / // // , _// _/ / __ | / /|_/ /   / /  / _/ / __ | / /|_/ / ");
-        System.out.println("/____/ \\_, /(_) /____//_/|_|/___//_/ |_|/_/  /_/   /_/  /___//_/ |_|/_/  /_/  ");
+        System.out.println("  / _ ) __ __ (_)  / _ \\ / _ \\ / __// _ |  /  |/  / /_  __// __// _ |  /  |/  /");
+        System.out.println(" / _  |/ // /_    / // // , _// _/ / __ | / /|_/ /   / /  / _/ / __ | / /|_/ / ");
+        System.out.println("/____/ \\_, /(_)  /____//_/|_|/___//_/ |_|/_/  /_/   /_/  /___//_/ |_|/_/  /_/  ");
         System.out.println("      /___/                                                                   "+reset);
         System.out.println("================================================================================================================================");
+        System.out.println("Presiona 'Enter' para comenzar.");
         sc.nextLine();
 
         do {
@@ -30,9 +32,9 @@ public class TERROBYTE {
             System.out.println("1.- Crear Perfil");
             System.out.println("2.- Crear Equipo");
             System.out.println("3.- Crear Proyecto");
-            System.out.println("4.- Crear Problema");
+            System.out.println("4.- Ver Tareas");
             System.out.println("5.- Mantenimiento de Teportes");
-            System.out.println("6.- Avance de Tareas");
+            System.out.println("6.- Crear Tareas");
             System.out.println("7.- Tablero Kanbam");
             System.out.println("8.- Ver Perfiles");
             System.out.println("9.- Ver Equipos");
@@ -55,11 +57,14 @@ public class TERROBYTE {
                 crearproyecto miProyecto = new crearproyecto();
                 miProyecto.main(args);
                     break;
-                case 4://crear problemas
+                case 4:vertareas mitareas = new vertareas();
+                mitareas.main(args);
                     break;
                 case 5: //reportes
                     break;
-                case 6://avanze de tareas
+                case 6:
+                creartareas lastareas = new creartareas();
+                lastareas.main(args);
                     break;
                 case 7: //kanbam
                     break;
@@ -76,7 +81,7 @@ public class TERROBYTE {
                     break;
                 }
     }
-        while (opcion != 6); //La condicion del bucle
+        while (opcion != 10); //La condicion del bucle
 
         sc.close();
     
