@@ -3,7 +3,6 @@
  import java.util.List;
  import java.util.Scanner;
  import java.util.Date;                 
-import java.text.SimpleDateFormat;
 public class avancestareas {
     
     public static void modificarTarea() {
