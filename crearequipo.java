@@ -7,10 +7,11 @@ public class crearequipo {
     // Lista para guardar todos los equipos creados
     private static List<List<String>> equipos = new ArrayList<>();
 
+    private static List<String> Nombres = new ArrayList<>();
+
     public void crearGrupo() {
         Scanner sc = new Scanner(System.in);
         List<String> perfiles = crearperfiles.obtenerNombresPerfiles();
-
         System.out.println("\n===== Crear Equipos =====");
 
         if (perfiles.isEmpty()) {
@@ -21,7 +22,8 @@ public class crearequipo {
         }
 
         System.out.print("Nombre del grupo: ");
-        String nombreGrupo = sc.nextLine();
+        String nombredelGrupo=sc.nextLine();
+        Nombres.add (nombredelGrupo);
 
         System.out.println("Perfiles disponibles:");
         for (int i = 0; i < perfiles.size(); i++) {
@@ -45,7 +47,7 @@ public class crearequipo {
 
         if (!miembros.isEmpty()) {
             equipos.add(miembros); //guardar equipos
-            System.out.println("\nGrupo '" + nombreGrupo + "' creado con estos miembros:");
+            System.out.println("\nGrupo '" + nombredelGrupo + "' creado con estos miembros:");
             for (String m : miembros) {
                 System.out.println("- " + m);
             }
@@ -56,7 +58,9 @@ public class crearequipo {
         System.out.println();
     }
 
-  
+    public static List<String> Obtenernombres() {
+        return Nombres;
+    }
     public static List<List<String>> obtenerEquipos() {
         return equipos;
     }

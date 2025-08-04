@@ -1,6 +1,5 @@
 import java.util.List;
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.Date;                 
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
@@ -26,7 +25,7 @@ static int totalTareas = 0;
     System.out.println("Ingresa el estado de la Tarea (ej: Pendiente, En Proceso, Terminado)");
     estadoTareas[totalTareas]=sc.nextLine();
     System.out.println("Equipos disponibles:");
-        List<List<String>> todosLosEquipos = crearequipo.obtenerEquipos();
+        List<String> todosLosEquipos = crearequipo.Obtenernombres();
 
         for (int i = 0; i <todosLosEquipos.size(); i++) {
             System.out.println((i+1) + ". "+todosLosEquipos.get(i));
