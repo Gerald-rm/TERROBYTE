@@ -35,10 +35,11 @@ public class TERROBYTE {
             System.out.println("4.- Ver Tareas");
             System.out.println("5.- Mantenimiento de Teportes");
             System.out.println("6.- Crear Tareas");
-            System.out.println("7.- Tablero Kanbam");
-            System.out.println("8.- Ver Perfiles");
-            System.out.println("9.- Ver Equipos");
-            System.out.println("10.- Salir del programa");
+            System.out.println("7.- Avances de tareas");
+            System.out.println("8.- Tablero Kanbam");
+            System.out.println("9.- Ver Perfiles");
+            System.out.println("10.- Ver Equipos");
+            System.out.println("11.- Salir del programa");
             System.out.print("Seleccione una opcion: ");
             opcion = sc.nextInt(); 
             System.out.println();
@@ -58,7 +59,7 @@ public class TERROBYTE {
                 miProyecto.main(args);
                     break;
                 case 4:vertareas mitareas = new vertareas();
-                mitareas.main(args);
+                mitareas.main();
                     break;
                 case 5: //reportes
                     break;
@@ -66,22 +67,30 @@ public class TERROBYTE {
                 creartareas lastareas = new creartareas();
                 lastareas.main(args);
                     break;
-                case 7: //kanbam
+                case 7: 
+                avancestareas avast = new avancestareas();
+                avancestareas.modificarTarea();
                     break;
-                case 8:
+                case 8: 
+                kanban tablero = new kanban();
+                kanban.mostrarTablero();
+                    break;
+                    
+                case 9:
                 verperfiles vp = new verperfiles();
                 vp.mostrar();
                     break;
-                case 9:
+                case 10:
                 verequipos ve = new verequipos();
                 ve.mostrar();
                     break;
-                case 10: 
+               
+                     case 11: 
                 System.exit(0);
                     break;
                 }
     }
-        while (opcion != 10); //La condicion del bucle
+        while (opcion != 11); //La condicion del bucle
 
         sc.close();
     

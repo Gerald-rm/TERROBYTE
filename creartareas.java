@@ -1,12 +1,16 @@
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Date;                 
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 
 public class creartareas {
 static final int Maximodetareas = 50;
 static String[] nombreTareas = new String[Maximodetareas];
 static String[] estadoTareas = new String[Maximodetareas];
 static int[] equipoTareas = new int[Maximodetareas];
+static Date[] fechasEntrega = new Date[Maximodetareas];
 static int totalTareas = 0;
 
     public static void main(String[] args) {
@@ -32,7 +36,27 @@ static int totalTareas = 0;
 
         totalTareas++;
         System.out.println("Tarea creada correctamente.");
+         System.out.print("La fecha de entrega es: (formato DD/MM/AAAA): ");
+        String fechaTexto = sc.nextLine();
+        
+        try {
+            // Define el formato que ingresa el usuario
+            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+            // Convierte el texto a un objeto Date
+            Date fecha = formato.parse(fechaTexto);
+            // Guarda el objeto dato en creartareas
+            fechasEntrega[totalTareas] = fecha;
+             //try hace que este bloque devuelva un error si se ingresa un formato invalido
+
+        } catch (ParseException e) {
+            System.out.println("Formato de fecha invalido, se asignara la fecha actual");
+            fechasEntrega[totalTareas] = new Date();
+             //catch solo ejecuta este bloque si atrapa el error proporcionado por 'try' y devuelve el error por el formato de fecha
+        }
+
     }
+
+    
 
     public static String[] getNombreTareas() {
     return nombreTareas;
