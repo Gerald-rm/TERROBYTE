@@ -1,11 +1,19 @@
 import java.util.Scanner;
 import java.util.List;
 public class crearproyecto {
+    static int Maximodeproyectos=50;
+    static String[] nombreproyecto = new String[Maximodeproyectos];
+    static int totalproyectos =0;
 public static void main(String[] args) {
+
     
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
+    if (totalproyectos >= Maximodeproyectos) {
+        System.out.println("se alcanso el limite de protectos");
+        
+    }    
     System.out.println("ingresa el Nombre del proyecto");
-    String Nombrepro = sc.nextLine();
+    nombreproyecto[totalproyectos]=sc.nextLine();
     System.out.println("quieres asignar miembros?");
     System.out.println("1 = Si");
     System.out.println("2 = No");
@@ -18,7 +26,9 @@ public static void main(String[] args) {
             System.out.println((i + 1) + ": " + perfilesDisponibles.get(i));
     
         }
-        System.out.println("elije el miemrbo disponible de la siguiente lista: ");
+        
+        System.out.println();
+        System.out.println("Elije el miembro disponible de la siguiente lista: ");
         int miembroselect= sc.nextInt();
         // no me pregunten como solo se que funciona despues de ver videos de tryhard indios
         if (miembroselect > 0 && miembroselect <= perfilesDisponibles.size()){
@@ -27,7 +37,7 @@ public static void main(String[] args) {
            //para coseguir un indice de la lista
            sc.nextLine();
 
-            System.out.println("proyecto "+Nombrepro+" creado exitosamente");
+            System.out.println("proyecto "+nombreproyecto[totalproyectos]+" creado exitosamente");
 
            System.out.println("Miembro: "+miembroasig+" fue asignado");
 
@@ -45,6 +55,7 @@ public static void main(String[] args) {
     } else {
         System.out.println("no se asignara ninguno ps ;(");
     }
+    totalproyectos++;
 
 
 }
