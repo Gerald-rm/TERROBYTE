@@ -25,9 +25,9 @@ static int totalTareas = 0;
         List<List<String>> todosLosEquipos = crearequipo.obtenerEquipos();
 
         for (int i = 0; i <todosLosEquipos.size(); i++) {
-            System.out.println(i + ". "+todosLosEquipos.get(i));
+            System.out.println((i+1) + ". "+todosLosEquipos.get(i));
         }
-        System.out.print("Asignar a equipo (índice): ");
+        System.out.print("Asignar a equipo : ");
         equipoTareas[totalTareas] = sc.nextInt(); sc.nextLine();
 
         totalTareas++;
