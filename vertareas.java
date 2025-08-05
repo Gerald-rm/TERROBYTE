@@ -4,7 +4,7 @@ public class vertareas {
     public static void main() {
         String[] nombres = creartareas.getNombreTareas();
         String[] estados = creartareas.getEstadoTareas();
-        int[] equipos = creartareas.getEquipoTareas();
+        int[] miembros = creartareas.getmiembrosTareas();
 int total = creartareas.getTotalTareas();
 
         if (total ==0) {
@@ -12,7 +12,7 @@ int total = creartareas.getTotalTareas();
             
         } else{
             for(int i=0; i<total; i++){
-            System.out.println( "ID de Tareas: "+i + " // tarea: "+(i+1)+": "+nombres[i]+" // Estado: "+estados[i]+" // Equipo asignao: "+equipos[(i+1)]);
+            System.out.println( "ID de Tareas: "+i+ " // tarea: "+(i+1)+": "+nombres[i]+" // Estado: "+estados[i]+" // Miembro asignado: "+miembros[i]);
             //agregue ID a las tareas para facilitarme la vida -Karro
             }
             

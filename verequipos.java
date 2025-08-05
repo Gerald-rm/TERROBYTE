@@ -13,7 +13,7 @@ public class verequipos {
         }
 
         for (int i = 0; i < equipos.size(); i++) {
-            System.out.println("Equipo " + (i + 1) + ":");
+            System.out.println("Equipo #" +(i+1)+" "+ crearequipo.Obtenernombres()+ ":");
             List<String> miembros = equipos.get(i);
             for (String m : miembros) {
                 System.out.println("- " + m);
