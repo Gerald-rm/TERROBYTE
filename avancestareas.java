@@ -1,8 +1,9 @@
  import java.text.ParseException;
  import java.text.SimpleDateFormat;
- import java.util.List;
  import java.util.Scanner;
  import java.util.Date;                 
+
+
 public class avancestareas {
     
     public static void modificarTarea() {
@@ -15,8 +16,9 @@ public class avancestareas {
         System.out.println("Modificar Tarea");
                 vertareas.main();
                 //asigne IDs a las tareas para no complicarme
-        System.out.println("Equipos Disponibles: ");
-          List<List<String>> todosLosEquipos = crearequipo.obtenerEquipos();
+        System.out.println("Miembros Disponibles: ");
+          verperfiles vp = new verperfiles();
+                vp.mostrar();
           //aqui accede a las listas de los equipos
         
         System.out.print("Ingrese el indice (ID) de la tarea a modificar: ");
@@ -30,6 +32,7 @@ public class avancestareas {
         
         System.out.print("Ingrese el nuevo nombre (deja en blanco para no cambiar): ");
         String nuevoNombre = sc.nextLine();
+        //segun david esta peculiar
         if (!nuevoNombre.isEmpty()) {
             creartareas.nombreTareas[indice] = nuevoNombre;
              // Modifica el array nombretareas de creartareas
@@ -37,20 +40,21 @@ public class avancestareas {
 
         System.out.print("Ingrese el nuevo estado (deja en blanco para no cambiar): ");
         String nuevoEstado = sc.nextLine();
+        //Peculiar 2        
         if (!nuevoEstado.isEmpty()) {
             creartareas.estadoTareas[indice] = nuevoEstado;
              // Modifica el array nombretareas de creartareas
         }
-        System.out.println("Desea asignar otro equipo a la tarea?");
+        System.out.println("Desea asignar otro miembro a la tarea?");
         System.out.println("Ingrese '1' para cambiar");
         System.out.println("Ingrese '2' para omitir");
         int binario = sc.nextInt();
         sc.nextLine();
         if(binario==1) { 
-        System.out.println("Asignar a equipo por indice (deje en blanco para no cambiar): ");
-            int nuevoEquipo = sc.nextInt();
+        System.out.println("Asignar a miembros por indice (deje en blanco para no cambiar): ");
+            int nuevomiembro = sc.nextInt();
             sc.nextLine();
-            creartareas.equipoTareas[indice] = nuevoEquipo;
+            creartareas.miembrosTareas[indice] = nuevomiembro;
         }
 
 
