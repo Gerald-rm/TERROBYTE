@@ -12,7 +12,9 @@ int total = creartareas.getTotalTareas();
             
         } else{
             for(int i=0; i<total; i++){
+
             System.out.println( "ID de Tareas: "+i+ " // tarea: "+(i+1)+": "+nombres[i]+" // Estado: "+estados[i]+" // Miembro asignado: "+miembros[i]);
+
             //agregue ID a las tareas para facilitarme la vida -Karro
             }
             

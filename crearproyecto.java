@@ -15,6 +15,7 @@ public static void main(String[] args) {
     System.out.println("Ingresa el Nombre del proyecto");
     nombreproyecto[totalproyectos]=sc.nextLine();
     System.out.println("Quieres asignar equipos?");
+
     System.out.println("1 = Si");
     System.out.println("2 = No");
 
@@ -28,8 +29,10 @@ public static void main(String[] args) {
         }
         
         System.out.println();
+
         System.out.println("Elije el equipo disponible de la siguiente lista: ");
         int equiposelect= sc.nextInt();
+
         // no me pregunten como solo se que funciona despues de ver videos de tryhard indios
         if (equiposelect > 0 && equiposelect <= equiposDisponibles.size()){
             //para que en la lista este el uusuario que elijas
@@ -37,7 +40,9 @@ public static void main(String[] args) {
            //para coseguir un indice de la lista
            sc.nextLine();
 
+
             System.out.println("Proyecto "+nombreproyecto[totalproyectos]+" creado exitosamente");
+
 
            System.out.println("Equipo: "+equipoasig+" fue asignado");
 

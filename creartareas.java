@@ -24,6 +24,7 @@ static int totalTareas = 0;
     nombreTareas[totalTareas]= sc.nextLine();
     System.out.println("Ingresa el estado de la Tarea (ej: Pendiente, En Proceso, Terminado)");
     estadoTareas[totalTareas]=sc.nextLine();
+
     System.out.println("Miembros disponibles:");
         List<String> todosLosMiembros = crearperfiles.obtenerNombresPerfiles();
 
@@ -35,6 +36,7 @@ static int totalTareas = 0;
         sc.nextLine();
         
         System.out.print("Ingrese la fecha de entrega: (formato DD/MM/AAAA): ");
+
         String fechaTexto = sc.nextLine();
         
         try {
