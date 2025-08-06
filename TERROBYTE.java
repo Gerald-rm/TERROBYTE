@@ -39,6 +39,7 @@ public class TERROBYTE {
             System.out.println("8.- Tablero Kanbam");
             System.out.println("9.- Ver Perfiles");
             System.out.println("10.- Ver Equipos");
+            System.out.println("11.- Ver Proyectos");
             System.out.println("11.- Salir del programa");
             System.out.print("Seleccione una opcion: ");
             opcion = sc.nextInt(); 
@@ -86,11 +87,16 @@ public class TERROBYTE {
                     break;
                
                      case 11: 
+                verproyectos vpo = new verproyectos();
+                vpo.mostrarListaDeProyectos();
+                    break;
+
+                     case 12: 
                 System.exit(0);
                     break;
                 }
     }
-        while (opcion != 11); //La condicion del bucle
+        while (opcion != 12); //La condicion del bucle
 
         sc.close();
     
