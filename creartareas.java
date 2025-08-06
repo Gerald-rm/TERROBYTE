@@ -41,9 +41,9 @@ static int totalTareas = 0;
         try {
             // Define el formato que ingresa el usuario
             SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-            // Convierte el texto a un objeto Date
+            // convierte el texto a un objeto Date
             Date fecha = formato.parse(fechaTexto);
-            // Guarda el objeto dato en creartareas
+            // guarda el objeto dato en creartareas
             fechasEntrega[totalTareas] = fecha;
              //try hace que este bloque devuelva un error si se ingresa un formato invalido
 
