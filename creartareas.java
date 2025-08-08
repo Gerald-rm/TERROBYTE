@@ -15,8 +15,10 @@ static int totalTareas = 0;
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
 
+        System.out.println("===========Crear Tareas===========");
+
     if (totalTareas >= Maximodetareas) {
-        System.out.println("Haz alcanzado el limite de tareas.");
+        System.out.println("Haz alcanzado el limite de tareas.\n");
         return;
     }
    
@@ -75,7 +77,7 @@ static int totalTareas = 0;
          System.out.println("Tarea creada correctamente.");
 
         SimpleDateFormat formatolimpio = new SimpleDateFormat("dd/MM/yyyy");
-        System.out.print("La fecha de entrega asignada es: " + formatolimpio.format(fechasEntrega[totalTareas]));
+        System.out.print("La fecha de entrega asignada es: " + formatolimpio.format(fechasEntrega[totalTareas])+"\n");
         //sirve para darle formato a la fecha para que esta sea legible
 
         totalTareas++;

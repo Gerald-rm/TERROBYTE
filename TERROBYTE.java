@@ -1,6 +1,5 @@
-import java.util.List;
 import java.util.Scanner;
-import java.util.ArrayList;
+
 
 public class TERROBYTE {
     public static void main(String[] args) {
@@ -24,7 +23,7 @@ public class TERROBYTE {
         System.out.println("/____/ \\_, /(_)  /____//_/|_|/___//_/ |_|/_/  /_/   /_/  /___//_/ |_|/_/  /_/  ");
         System.out.println("      /___/                                                                   "+reset);
         System.out.println("================================================================================================================================");
-        System.out.println("Presiona 'Enter' para comenzar.");
+        System.out.print("Presiona 'Enter' para comenzar.");
         sc.nextLine();
 
         do {
@@ -40,7 +39,7 @@ public class TERROBYTE {
             System.out.println("9.- Ver Perfiles");
             System.out.println("10.- Ver Equipos");
             System.out.println("11.- Ver Proyectos");
-            System.out.println("11.- Salir del programa");
+            System.out.println("12.- Salir del programa");
             boolean entradaValida;
             String entrada;
             opcion = -85;
@@ -107,8 +106,12 @@ public class TERROBYTE {
                 vpo.mostrarListaDeProyectos();
                     break;
 
-                     case 12: 
+                    case 12: 
                 System.exit(0);
+                    break;
+
+                    default:
+                    System.out.println("Opcion incorrecta. Ingrese un valor entre el 1-12");
                     break;
                 }
     }
