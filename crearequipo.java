@@ -42,6 +42,7 @@ public class crearequipo {
                 }
             } catch (NumberFormatException e) {
                 // Ignorar errores de conversión
+                System.out.println("El numero no es valido");
             }
         }
 

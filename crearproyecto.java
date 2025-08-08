@@ -15,12 +15,23 @@ public static void main(String[] args) {
     System.out.println("Ingresa el Nombre del proyecto");
     nombreproyecto[totalproyectos]=sc.nextLine();
     System.out.println("Quieres asignar equipos?");
-
-    System.out.println("1 = Si");
-    System.out.println("2 = No");
-
-    int opcion= sc.nextInt();
-
+    int opcion = -666;
+    boolean entradaValida = false;
+    do {
+        System.out.println("1 = Sí");
+        System.out.println("2 = No");
+        String entrada = sc.nextLine();
+        try {
+            opcion = Integer.parseInt(entrada);
+            if (opcion == 1 || opcion == 2) {
+                entradaValida = true;
+            } else {
+                System.out.println("Solo puedes ingresar 1 o 2.");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Solo numeros.");
+        }
+    } while (!entradaValida);
     if (opcion == 1) {
         List<String> equiposDisponibles = crearequipo.Obtenernombres();
         for (int i = 0; i < equiposDisponibles.size(); i++){

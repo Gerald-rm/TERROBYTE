@@ -31,9 +31,28 @@ static int totalTareas = 0;
         for (int i = 0; i <todosLosMiembros.size(); i++) {
             System.out.println((i+1) + ". "+todosLosMiembros.get(i));
         }
-        System.out.print("Asignar a miembro (índice): ");
-        miembrosTareas[totalTareas] = sc.nextInt(); 
-        sc.nextLine();
+        boolean entradaValida = false;
+        String entrada;
+        int indice = -1;
+
+        do {
+            System.out.print("Asignar a miembro: ");
+            entrada = sc.nextLine();
+
+            try {
+                indice = Integer.parseInt(entrada);
+                if (indice >= 1 && indice <= todosLosMiembros.size()) {
+                    entradaValida = true;
+                } else {
+                    System.out.println("numero de miembro fuera de rango");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println(" Escribe un numero.");
+            }
+        } while (!entradaValida);
+
+        miembrosTareas[totalTareas] = indice;
+
         
         System.out.print("Ingrese la fecha de entrega: (formato DD/MM/AAAA): ");
 
@@ -42,9 +61,9 @@ static int totalTareas = 0;
         try {
             // Define el formato que ingresa el usuario
             SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-            // Convierte el texto a un objeto Date
+            // convierte el texto a un objeto Date
             Date fecha = formato.parse(fechaTexto);
-            // Guarda el objeto dato en creartareas
+            // guarda el objeto dato en creartareas
             fechasEntrega[totalTareas] = fecha;
              //try hace que este bloque devuelva un error si se ingresa un formato invalido
 
