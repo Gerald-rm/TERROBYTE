@@ -98,8 +98,10 @@ static int totalTareas = 0;
     public static int getTotalTareas() {
     return totalTareas;
 }
+ 
+    public static Date[] getFechasTareas(){
+    return fechasEntrega;
+}
 
-
-    
 }
 

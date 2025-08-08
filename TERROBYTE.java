@@ -40,7 +40,9 @@ public class TERROBYTE {
             System.out.println("9.- Ver Perfiles");
             System.out.println("10.- Ver Equipos");
             System.out.println("11.- Ver Proyectos");
-            System.out.println("11.- Salir del programa");
+
+            System.out.println("12.- Salir del programa");
+
             boolean entradaValida;
             String entrada;
             opcion = -85;
@@ -78,7 +80,7 @@ public class TERROBYTE {
                 creartareas lastareas = new creartareas();
                 lastareas.main(args);
                     break;
-                case 5: //reportes
+                case 5: //reportes lol
                     break;
                 case 6:
                 vertareas mitareas = new vertareas();
@@ -90,7 +92,7 @@ public class TERROBYTE {
                     break;
                 case 8: 
                 kanban tablero = new kanban();
-                kanban.mostrarTablero();
+                kanban.tablero();
                     break;
                     
                 case 9:
