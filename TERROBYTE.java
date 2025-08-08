@@ -32,19 +32,34 @@ public class TERROBYTE {
             System.out.println("1.- Crear Perfil");
             System.out.println("2.- Crear Equipo");
             System.out.println("3.- Crear Proyecto");
-            System.out.println("4.- Ver Tareas");
+            System.out.println("4.- Crear Tareas");
             System.out.println("5.- Mantenimiento de Teportes");
-            System.out.println("6.- Crear Tareas");
+            System.out.println("6.- Ver Tareas");
             System.out.println("7.- Avances de tareas");
             System.out.println("8.- Tablero Kanbam");
             System.out.println("9.- Ver Perfiles");
             System.out.println("10.- Ver Equipos");
             System.out.println("11.- Ver Proyectos");
             System.out.println("11.- Salir del programa");
+            boolean entradaValida;
+            String entrada;
+            opcion = -85;
+
+            do {
+            entradaValida = true;
             System.out.print("Seleccione una opcion: ");
-            opcion = sc.nextInt(); 
+            entrada = sc.nextLine();
+
+            try {
+            opcion = Integer.parseInt(entrada);
+            } catch (NumberFormatException e) {
+            System.out.println("Escribe un numero");
+            entradaValida = false;
+            }
+            } while (!entradaValida);
+
             System.out.println();
-            sc.nextLine();
+
 
             switch(opcion){
                 case 1 : 
@@ -59,14 +74,15 @@ public class TERROBYTE {
                 crearproyecto miProyecto = new crearproyecto();
                 miProyecto.main(args);
                     break;
-                case 4:vertareas mitareas = new vertareas();
-                mitareas.main();
+                case 4:
+                creartareas lastareas = new creartareas();
+                lastareas.main(args);
                     break;
                 case 5: //reportes
                     break;
                 case 6:
-                creartareas lastareas = new creartareas();
-                lastareas.main(args);
+                vertareas mitareas = new vertareas();
+                mitareas.main();
                     break;
                 case 7: 
                 avancestareas avast = new avancestareas();
