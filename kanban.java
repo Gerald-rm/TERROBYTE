@@ -1,71 +1,98 @@
 import java.util.Date;
+import java.util.List;
+import java.text.SimpleDateFormat;
 import java.lang.Math;
+
 
 public class kanban {
 
-    private static String componerCelda(String estadoBuscado, int posicion) {
-        // Se asume que los datos están en una clase BaseDeDatosTareas
-        String[] nombres = creartareas.nombreTareas;
-        String[] estados = creartareas.estadoTareas;
-        Date[] fechas = creartareas.fechasEntrega;
-        int totalTareas = creartareas.totalTareas;
+    
+    private static String crearContenidoCelda(String estadoBuscado, int posicion) {
+        // consulta todos los datos de creartareas y consultamos la lista de crearperfiles
+        int totalTareas = creartareas.getTotalTareas();
+        String[] nombres = creartareas.getNombreTareas();
+        String[] estados = creartareas.getEstadoTareas();
+        int[] indicesMiembros = creartareas.getmiembrosTareas();
+        Date[] fechas = creartareas.getFechasTareas();
+        List<String> listaDeNombresMiembros = crearperfiles.obtenerNombresPerfiles();
         
-        int contadorLocal = 0; // Para encontrar la posicion de la tarea
+        int contadorCoincidencias = 0; 
         
+        // se recorren todas las tareas
         for (int i = 0; i < totalTareas; i++) {
-            // busca tareas por estado
-            if (estados[i].equalsIgnoreCase(estadoBuscado)) {
-                
-                if (contadorLocal == posicion) {
-                    String nombreTarea = nombres[i];
-                    Date fechaTarea = fechas[i];
-                    
-                    // Si tiene fecha se le da formato y se muestra junto al nombre
-                    if (fechaTarea != null) {
-                        String fechaFormateada = String.format("(%1$tY-%1$tm-%1$td)", fechaTarea);
-                        return nombreTarea + " " + fechaFormateada;
-                    } else {
-                        // Si no tiene fecha solo se devuelve el nombre
-                        return nombreTarea;
-                    }
+            String estadoActual = estados[i];
+            boolean coincidencia = false;
+
+            // se comprueba si el estado de la tarea actual coincide con el que buscamos
+            if (estadoBuscado.equalsIgnoreCase("Hecho")) {
+                // caso especial para la ultima columna "Terminado"
+                if (estadoActual.equalsIgnoreCase("Terminado")) {
+                    coincidencia = true;
                 }
-                // Si no encuentra la posicion, sigue contando
-                contadorLocal++;
+            } else {
+                // Caso para las demas columnas
+                if (estadoActual.equalsIgnoreCase(estadoBuscado)) {
+                    coincidencia = true;
+                }
+            }
+
+            // si el estado coincide vemos si es la posición que nos interesa
+            if (coincidencia) {
+                if (contadorCoincidencias == posicion) {
+                    //recopilamos y formateamos sus datos
+                    String nombreTarea = nombres[i];
+                    
+                    // se asignan los nombre de miembros
+                    int indiceMiembro = indicesMiembros[i] - 1; // se resta 1 porque los arrays empiezan en 0
+                    String nombreMiembro = "N/A";
+                    if (indiceMiembro >= 0 && indiceMiembro < listaDeNombresMiembros.size()) {
+                        nombreMiembro = listaDeNombresMiembros.get(indiceMiembro);
+                    }
+                    
+                    // se le da formato a la fecha
+                    String fechaFormateada = "Sin fecha";
+                    if (fechas[i] != null) {
+                        fechaFormateada = new SimpleDateFormat("yyyy-MM-dd").format(fechas[i]);
+                    }
+                    
+                    // Devolvemos la "tarjeta" completa y salimos de la función
+                    return String.format("%s | Miembro: %s | Entrega: %s", nombreTarea, nombreMiembro, fechaFormateada);
+                }
+                // Si no es la posición que buscamos, contamos y seguimos
+                contadorCoincidencias++;
             }
         }
         
-        return ""; 
+        return ""; // Se devuelve vacio cuando no encuentra ninguna tarea.
     }
 
-    public static void mostrarTablero() {
-        //Cuenta cuantas tareas hay en cada estado
-        int pendientes = 0, Proceso = 0, terminado = 0;
-        for (int i = 0; i < creartareas.totalTareas; i++) {
-            String estado = creartareas.estadoTareas[i];
+    public static void tablero() {
+        // Contamos tareas en cada estado para saber la altura del tablero
+        int pendientes = 0, enProceso = 0, terminado = 0;
+        for (int i = 0; i < creartareas.getTotalTareas(); i++) {
+            String estado = creartareas.getEstadoTareas()[i];
             if (estado.equalsIgnoreCase("Pendiente")) pendientes++;
-            else if (estado.equalsIgnoreCase("En Proceso")) Proceso++;
+            else if (estado.equalsIgnoreCase("En Proceso")) enProceso++;
             else if (estado.equalsIgnoreCase("Terminado")) terminado++;
         }
 
-        //Calcula la altura maxima del tablero
-        int alturaMaxima = Math.max(pendientes, Math.max(Proceso, terminado));
+        int alturaMaxima = Math.max(pendientes, Math.max(enProceso, terminado));
+        String formatoFila = "| %-60s | %-60s | %-60s |\n";
 
-        //Imprime los encabezados
-        String formatoFila = "| %-40s | %-40s | %-40s |\n";
-        System.out.println("\n====================================================== KANBAN ======================================================");
-        System.out.printf(formatoFila, "PENDIENTE", "EN PROGRESO", "TERMINADO");
-        System.out.println("----------------------------------------------------------------------------------------------------------------------------");
+        // Imprime el encabezado
+        System.out.println("\n=================================================================== TABLERO KANBAN ===================================================================");
+        System.out.printf(formatoFila, "PENDIENTE", "EN PROCESO", "TERMINADO");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------");
 
-        
+        // Dibuja cada fila del tablero
         for (int i = 0; i < alturaMaxima; i++) {
-            //se compone la celda con la funcion componercelda
-            String celda1 = componerCelda("Pendiente", i);
-            String celda2 = componerCelda("En Progreso", i);
-            String celda3 = componerCelda("Hecho", i);
+            // Para cada celda, llamamos al método de ayuda para que construya su contenido
+            String celdaPendiente = crearContenidoCelda("Pendiente", i);
+            String celdaEnProceso = crearContenidoCelda("En Proceso", i);
+            String celdaterminada = crearContenidoCelda("Terminado", i); // busca"Terminado"
 
-            // Imprime la fila completa
-            System.out.printf(formatoFila, celda1, celda2, celda3);
+            System.out.printf(formatoFila, celdaPendiente, celdaEnProceso, celdaterminada);
         }
-        System.out.println("----------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 }
