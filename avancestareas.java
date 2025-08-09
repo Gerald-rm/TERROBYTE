@@ -8,8 +8,11 @@ public class avancestareas {
     
     public static void modificarTarea() {
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("=====Avance De Tareas=====");
+
         if (creartareas.totalTareas == 0) {
-            System.out.println("No hay tareas para modificar");
+            System.out.println("No hay tareas para modificar\n");
             return; //retorna al menu si no hay tareas lol
         }
 
@@ -39,7 +42,7 @@ public class avancestareas {
 
         
         if (indice < 0 || indice >= creartareas.totalTareas) {
-            System.out.println("Error: Indice no valido");
+            System.out.println("Error: Indice no valido\n");
             return;
         }
         
@@ -117,11 +120,11 @@ public class avancestareas {
                //try hace que este bloque devuelva un error si se ingresa un formato invalido
 
             } catch (ParseException e) {
-                System.out.println("Formato de fecha invalido. La fecha no se modifico.");
+                System.out.println("Formato de fecha invalido. La fecha no se modifico.\n");
                  //catch solo ejecuta este bloque si atrapa el error proporcionado por 'try' y devuelve el error por el formato de fecha
             }
         }
-        System.out.println("Tarea actualizada");
+        System.out.println("Tarea actualizada\n");
     }
 
     

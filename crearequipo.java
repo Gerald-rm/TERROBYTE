@@ -12,7 +12,7 @@ public class crearequipo {
     public void crearGrupo() {
         Scanner sc = new Scanner(System.in);
         List<String> perfiles = crearperfiles.obtenerNombresPerfiles();
-        System.out.println("\n===== Crear Equipos =====");
+        System.out.println("\n======Crear Equipos======");
 
         if (perfiles.isEmpty()) {
             System.out.println("No hay perfiles. Crea uno ahora.\n");

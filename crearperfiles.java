@@ -11,6 +11,8 @@ public class crearperfiles {
     public void crearnuevoPerfil() {
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("=====Crear Perfiles=====");
+
         System.out.print("Ingresa tu nombre: ");
         String nombre = sc.nextLine();
 
@@ -25,7 +27,7 @@ public class crearperfiles {
 
         System.out.println("\nperfil creado exitosamente:");
         System.out.println("Nombre completo: " + nombreCompleto);
-        System.out.println("Correo: " + correo);
+        System.out.println("Correo: " + correo+"\n");
     }
 
     // este metodo permite el acceso a la lista
