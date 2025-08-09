@@ -1,6 +1,6 @@
 public class verproyectos {
 
-public static void mostrarListaDeProyectos() {
+public static void mostrarListadeproyectos() {
         
         String[] nombres = crearproyecto.getnombreproyecto();
         int total = crearproyecto.getTotalProyectos();

@@ -33,14 +33,14 @@ public class TERROBYTE {
             System.out.println("2.- Crear Equipo");
             System.out.println("3.- Crear Proyecto");
             System.out.println("4.- Crear Tareas");
-            System.out.println("5.- Mantenimiento de Teportes");
+            System.out.println("5.- Crear Reportes");
             System.out.println("6.- Ver Tareas");
             System.out.println("7.- Avances de tareas");
             System.out.println("8.- Tablero Kanbam");
             System.out.println("9.- Ver Perfiles");
             System.out.println("10.- Ver Equipos");
             System.out.println("11.- Ver Proyectos");
-            System.out.println("11.- Salir del programa");
+            System.out.println("12.- Salir del programa");
             boolean entradaValida;
             String entrada;
             opcion = -85;
@@ -78,7 +78,9 @@ public class TERROBYTE {
                 creartareas lastareas = new creartareas();
                 lastareas.main(args);
                     break;
-                case 5: //reportes
+                case 5: 
+                crearreporte losreportes = new crearreporte();
+                losreportes.main(args);
                     break;
                 case 6:
                 vertareas mitareas = new vertareas();
@@ -104,7 +106,7 @@ public class TERROBYTE {
                
                      case 11: 
                 verproyectos vpo = new verproyectos();
-                vpo.mostrarListaDeProyectos();
+                vpo.mostrarListadeproyectos();
                     break;
 
                      case 12: 
