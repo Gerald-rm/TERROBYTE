@@ -28,7 +28,7 @@ public class kanban{
         String estado = estados[i];
         //se hace consulta de estados
         if (estado.equalsIgnoreCase("Pendiente")) pendiente++;
-        else if (estado.equalsIgnoreCase("En Proceso")) enproceso++;
+        else if (estado.equalsIgnoreCase("En Proceso") || estado.equalsIgnoreCase("Proceso")) enproceso++;
         else if (estado.equalsIgnoreCase("Terminado")) terminada++;
         //aqui se usa el equalsignorecase para hacer que los estados se agreguen sin importar como fue que
         //el usuario ingresase el estado en la clase creartareas, osea minusculas o mayusculas
@@ -65,7 +65,7 @@ public class kanban{
         if (estado.equalsIgnoreCase("Pendiente")) {
             tabla[columnapendiente][0] = plantilla;
             columnapendiente++;
-        } else if (estado.equalsIgnoreCase("En Proceso")){
+        } else if (estado.equalsIgnoreCase("En Proceso") || estado.equalsIgnoreCase("Proceso")) {
             tabla[columnaproceso][1] = plantilla;
             columnaproceso++;
         } else if (estado.equalsIgnoreCase("Terminado")){
@@ -78,26 +78,26 @@ public class kanban{
 
     String formato = "| %-60s | %-60s | %60s |\n";
     //se le asignan 60 caracteres de espacio entre string xd
-    System.out.println("\n=========================================================================================================== Kanban ===========================================================================================================");
+    System.out.println("\n=========================================================================================== Kanban ===========================================================================================");
     //le spam signo igual xd
     System.out.printf(formato,"Pendiente","En Proceso","Terminado");
     //printf: impresion con fossrmato lol
-    //pstt: no me pidan que le ponga 'Por hacer', 'En progreso' y 'Hecho', literalmente son sinonimos y tambien tendrian que modificar las demas clases solo para eso
-    System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+    //pstt: no me pidan que le ponga 'Por hacer', 'En p4rogreso' y 'Hecho', literalmente son sinonimos y tambien tendrian que modificar las demas clases solo para eso
+    System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
     for (int i =0; i<maxi;i++){
         String columna1 = (tabla[i][0]!=null) ? tabla[i][0]:"";
         //bascamente nos dice que la tabla empieza en la posicion '0' y avanza a partir de ahi, si en esa posicion no hay nada, solo imprime algo vacio
         //se repite la misma logica para las demas columnas xd
         //pstt: no David, no voy a hacer un if para que no imprima absolutamente nada, que hueva.
-        String columna2 = (tabla[i][0]!=null) ? tabla[i][1]:"";
-        String columna3 = (tabla[i][0]!=null) ? tabla[i][2]:"";
+        String columna2 = (tabla[i][1]!=null) ? tabla[i][1]:"";
+        String columna3 = (tabla[i][2]!=null) ? tabla[i][2]:"";
 
         System.out.printf(formato,columna1,columna2,columna3);
         //la logica es la siguiente: se ingresa la variable que contiene el formato con el que se va a imprimir,
         //luego se agregan las variables a las que se les va a aplicar el formato y ya
     }
-    System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+    System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
 }
 }
