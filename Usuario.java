@@ -28,17 +28,20 @@ public class Usuario {
             TERROBYTE es un software dedicado a la gestion de tareas asi como su delegacion de actividades.
             El proposito inicial es que el administrador pueda facilitar la logica de una tarea para el usuario
         
-                """);
+            """);
 
         do {
             System.out.println("\n=============Inicio=============");
+            System.out.println( "Ingrese un valor entre el 1-9");
             System.out.println("1.- Ver Tareas");
             System.out.println("2.- Avances de tareas");
             System.out.println("3.- Tablero Kanbam");
             System.out.println("4.- Ver Perfiles");
             System.out.println("5.- Ver Equipos");
             System.out.println("6.- Ver Proyectos");
-            System.out.println("7.- Salir del programa");
+            System.out.println("7.- Ver Reportes ");
+            System.out.println("8.- cambiar sesion ");
+            System.out.println("9.- Salir del programa");
             boolean entradaValida;
             String entrada;
             opcion = -85;
@@ -86,17 +89,25 @@ public class Usuario {
                 verproyectos vpo = new verproyectos();
                 vpo.mostrarListadeproyectos();
                     break;
+                    case 7:
+                verreportes lasreportes =new verreportes();
+                lasreportes.main(args);
+                    break;
+                       case 8:
+                login ellogin =new login();
+                ellogin.main(args);
+                    break;
 
-                    case 7: 
+                    case 9: 
                 System.exit(0);
                     break;
 
                     default:
-                    System.out.println("Opcion incorrecta. Ingrese un valor entre el 1-7");
+                    System.out.println("Opcion incorrecta. Ingrese un valor entre el 1-9");
                     break;
                 }
     }
-        while (opcion != 7); //La condicion del bucle
+        while (opcion != 9); //La condicion del bucle
 
         sc.close();
     

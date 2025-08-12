@@ -33,7 +33,7 @@ public class TERROBYTE {
 
         do {
             System.out.println("\n=============Inicio=============");
-            System.out.println( "Ingrese un valor entre el 1-13");
+            System.out.println( "Ingrese un valor entre el 1-14");
             System.out.println("1.- Crear Perfil");
             System.out.println("2.- Crear Equipo");
             System.out.println("3.- Crear Proyecto");
