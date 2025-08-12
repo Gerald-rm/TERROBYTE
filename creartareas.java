@@ -11,7 +11,13 @@ static String[] estadoTareas = new String[Maximodetareas];
 static int[] miembrosTareas = new int[Maximodetareas];
 static Date[] fechasEntrega = new Date[Maximodetareas];
 static int totalTareas = 0;
-
+static{
+       nombreTareas[totalTareas]  = "Comprar sodas";
+        estadoTareas[totalTareas]  = "Pendiente";
+        miembrosTareas[totalTareas]= 1;
+        fechasEntrega[totalTareas] = new Date(); // la fecha de hoy
+        totalTareas++;
+}
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
 
