@@ -6,7 +6,6 @@ public static void mostrarListadeproyectos() {
         int total = crearproyecto.getTotalProyectos();
         String[] equipos = crearproyecto.getEquipoAsignado();
 
-
         System.out.println("\n=====Ver Proyectos=====");
 
         //revisa si hay proyectos que mostrar

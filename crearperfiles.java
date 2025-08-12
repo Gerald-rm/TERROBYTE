@@ -6,15 +6,12 @@ public class crearperfiles {
     
     // se ocupa estatic para que se pueda compartir con las demas clases
     private static List<String> nombresPerfilesCreados = new ArrayList<>();
-
     private static List<String> nombreYCorreos =new ArrayList<>();
-    
-  static {
+     static {
         nombresPerfilesCreados.add("Pinto GPT");
         nombresPerfilesCreados.add("Navy Lara");
-        nombresPerfilesCreados.add("Eduardo Tulane");
-
-    }
+        nombresPerfilesCreados.add("Eduardo Tulane");}
+     
     // esta funcion es para crear el perfil, se supone que es mas facil para compartir con otras clases
     public void crearnuevoPerfil() {
         Scanner sc = new Scanner(System.in);
