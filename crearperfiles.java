@@ -13,7 +13,9 @@ public class crearperfiles {
         nombresPerfilesCreados.add("Eduardo Tulane");
     }
     static{
-        nombreYCorreos.add("Pinto GPT \n");
+        nombreYCorreos.add("Pinto GPT"+" "+"\ncorreo: "+"pintohomeless@gmail.com");
+        nombreYCorreos.add("Naivy Lara"+" "+"\ncorreo: "+"navycorp@ut-tijuana.com");
+        nombreYCorreos.add("Eduardo Tulane"+" "+"\ncorreo: "+"edduardotulipanes@hotmail.com");
     }
         
      
