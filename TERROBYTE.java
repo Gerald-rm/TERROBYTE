@@ -113,21 +113,22 @@ public class TERROBYTE {
                 verproyectos vpo = new verproyectos();
                 vpo.mostrarListadeproyectos();
                     break;
+                    case 12:
+                    login ellogin =new login();
+                    ellogin.main(args);
+                    break;
 
-                    case 12: 
+                    case 13: 
                 System.exit(0);
                     break;
-                case 13: 
-                login ellogin =new login();
-                ellogin.main(args);
-                    break;
+                             
 
                     default:
-                    System.out.println("Opcion incorrecta. Ingrese un valor entre el 1-12");
+                    System.out.println("Opcion incorrecta. Ingrese un valor entre el 1-13");
                     break;
                 }
     }
-        while (opcion != 12); //La condicion del bucle
+        while (opcion != 13); //La condicion del bucle
 
         sc.close();
     
