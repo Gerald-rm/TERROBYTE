@@ -1,9 +1,8 @@
 import java.util.Scanner;
 
-
-public class TERROBYTE {
+public class Usuario {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+         Scanner sc = new Scanner(System.in);
         String red = "\u001B[31m";
         String reset = "\u001B[0m";
         int opcion;
@@ -25,27 +24,21 @@ public class TERROBYTE {
         System.out.println("================================================================================================================================");
         System.out.print("Presiona 'Enter' para comenzar.");
         sc.nextLine();
-        System.out.println("""
+         System.out.println("""
             TERROBYTE es un software dedicado a la gestion de tareas asi como su delegacion de actividades.
             El proposito inicial es que el administrador pueda facilitar la logica de una tarea para el usuario
-                
+        
                 """);
 
         do {
             System.out.println("\n=============Inicio=============");
-            System.out.println("1.- Crear Perfil");
-            System.out.println("2.- Crear Equipo");
-            System.out.println("3.- Crear Proyecto");
-            System.out.println("4.- Crear Tareas");
-            System.out.println("5.- Crear Reportes");
-            System.out.println("6.- Ver Tareas");
-            System.out.println("7.- Avances de tareas");
-            System.out.println("8.- Tablero Kanbam");
-            System.out.println("9.- Ver Perfiles");
-            System.out.println("10.- Ver Equipos");
-            System.out.println("11.- Ver Proyectos");
-            System.out.println("12.- Salir del programa");
-            System.out.println("cambiar sesion 13");
+            System.out.println("1.- Ver Tareas");
+            System.out.println("2.- Avances de tareas");
+            System.out.println("3.- Tablero Kanbam");
+            System.out.println("4.- Ver Perfiles");
+            System.out.println("5.- Ver Equipos");
+            System.out.println("6.- Ver Proyectos");
+            System.out.println("7.- Salir del programa");
             boolean entradaValida;
             String entrada;
             opcion = -85;
@@ -67,69 +60,48 @@ public class TERROBYTE {
 
 
             switch(opcion){
-                case 1 : 
-                crearperfiles misperfiles = new crearperfiles();
-                misperfiles.crearnuevoPerfil();
-                    break;
-                case 2: 
-                crearequipo ce = new crearequipo();
-                ce.crearGrupo();
-                    break;
-                case 3 :
-                crearproyecto miProyecto = new crearproyecto();
-                miProyecto.main(args);
-                    break;
-                case 4:
-                creartareas lastareas = new creartareas();
-                lastareas.main(args);
-                    break;
-                case 5: 
-                crearreporte losreportes = new crearreporte();
-                losreportes.main(args);
-                    break;
-                case 6:
+                case 1:
                 vertareas mitareas = new vertareas();
                 mitareas.main();
                     break;
-                case 7: 
+                case 2: 
                 avancestareas avast = new avancestareas();
                 avancestareas.modificarTarea();
                     break;
-                case 8: 
+                case 3: 
                 kanban tablero = new kanban();
                 kanban.tablero();
                     break;
                     
-                case 9:
+                case 4:
                 verperfiles vp = new verperfiles();
                 vp.mostrar();
                     break;
-                case 10:
+                case 5:
                 verequipos ve = new verequipos();
                 ve.mostrar();
                     break;
                
-                     case 11: 
+                     case 6: 
                 verproyectos vpo = new verproyectos();
                 vpo.mostrarListadeproyectos();
                     break;
 
-                    case 12: 
+                    case 7: 
                 System.exit(0);
-                    break;
-                case 13: 
-                login ellogin =new login();
-                ellogin.main(args);
                     break;
 
                     default:
-                    System.out.println("Opcion incorrecta. Ingrese un valor entre el 1-12");
+                    System.out.println("Opcion incorrecta. Ingrese un valor entre el 1-7");
                     break;
                 }
     }
-        while (opcion != 12); //La condicion del bucle
+        while (opcion != 7); //La condicion del bucle
 
         sc.close();
     
 }
 }
+
+        
+    
