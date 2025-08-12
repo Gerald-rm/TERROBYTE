@@ -5,7 +5,7 @@ public class verequipos {
     public void mostrar() {
         List<List<String>> equipos = crearequipo.obtenerEquipos();
 
-        System.out.println("\n===== Equipos creados =====");
+        System.out.println("\n======Equipos creados======");
 
         if (equipos.isEmpty()) {
             System.out.println("No hay equipos aun.\n");

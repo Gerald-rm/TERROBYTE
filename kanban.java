@@ -10,6 +10,8 @@ import java.lang.Math;
 
 public class kanban{
     public static void tablero() {
+
+        System.out.println("\n============Tabla de Kanbam==========\n");
         
     
     //aqui se hace la consulta de datos de las demas clases
