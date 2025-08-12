@@ -17,6 +17,16 @@ static{
         miembrosTareas[totalTareas]= 1;
         fechasEntrega[totalTareas] = new Date(); // la fecha de hoy
         totalTareas++;
+        nombreTareas[totalTareas]  = "Pasear al perro";
+        estadoTareas[totalTareas]  = "En Proceso";
+        miembrosTareas[totalTareas]= 2;
+        fechasEntrega[totalTareas] = new Date(); // la fecha de hoy
+        totalTareas++;
+         nombreTareas[totalTareas]  = "Hacer papeleo";
+        estadoTareas[totalTareas]  = "Terminado";
+        miembrosTareas[totalTareas]= 3;
+        fechasEntrega[totalTareas] = new Date(); // la fecha de hoy
+        totalTareas++;
 }
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
@@ -112,4 +122,3 @@ static{
 }
 
 }
-

@@ -19,10 +19,6 @@ public class avancestareas {
         System.out.println("Modificar Tarea");
                 vertareas.main();
                 //asigne IDs a las tareas para no complicarme
-        System.out.println("Miembros Disponibles: ");
-          verperfiles vp = new verperfiles();
-                vp.mostrar();
-          //aqui accede a las listas de los equipos
         int indice = -28888;
         boolean entradaValida = false;
         do {
@@ -83,8 +79,12 @@ public class avancestareas {
         } while (!entradavalida);
 
         if (binario == 1) {
+           verperfiles vp = new verperfiles();
+            vp.mostrar();
+            System.out.println("==============================");
+          //aqui accede a las listas de los miembros
 
-        System.out.println("Asignar a miembros por indice (deje en blanco para no cambiar): ");
+        System.out.println("Asigne a los miembros por numero de indice:");
             int nuevomiembro = -1;
         entradaValida = false;
         do {
