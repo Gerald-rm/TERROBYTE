@@ -28,6 +28,7 @@ public static void main(String[] args) {
     System.out.println("\n=======Crear Proyecto========");
     if (totalproyectos >= Maximodeproyectos) {
         System.out.println("Se alcanzo el limite de protectos");
+        return;
         
     }    
     System.out.println("Ingresa el Nombre del proyecto");
@@ -66,7 +67,9 @@ public static void main(String[] args) {
         // no me pregunten como solo se que funciona despues de ver videos de tryhard indios
         if (equiposelect > 0 && equiposelect <= equiposDisponibles.size()){
             //para que en la lista este el uusuario que elijas
-           String equipoasig = equiposDisponibles.get(equiposelect - 1);
+           //String equipoasig = equiposDisponibles.get(equiposelect - 1);
+           equipoasig[totalproyectos] = equiposDisponibles.get(equiposelect - 1);
+
            //para coseguir un indice de la lista
            sc.nextLine();
 
@@ -74,7 +77,7 @@ public static void main(String[] args) {
             System.out.println("Proyecto "+nombreproyecto[totalproyectos]+" creado exitosamente");
 
 
-           System.out.println("Equipo: "+equipoasig+" fue asignado");
+           System.out.println("Equipo: "+equipoasig[totalproyectos]+" fue asignado");
 
 
         }else if(equiposelect==0){
@@ -89,6 +92,7 @@ public static void main(String[] args) {
         
     } else {
         System.out.println("No se asignara ninguno ps ;(");
+         equipoasig[totalproyectos] = "Sin equipo";
     }
     totalproyectos++;
 
