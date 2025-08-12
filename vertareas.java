@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 public class vertareas {
     public static void main() {
+
+        System.out.println("\n=====Ver Tareas=====");
+
         String[] nombres = creartareas.getNombreTareas();
         String[] estados = creartareas.getEstadoTareas();
         int[] miembros = creartareas.getmiembrosTareas();

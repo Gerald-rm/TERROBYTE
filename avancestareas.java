@@ -9,7 +9,7 @@ public class avancestareas {
     public static void modificarTarea() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("=====Avance De Tareas=====");
+        System.out.println("\n=====Avance De Tareas=====");
 
         if (creartareas.totalTareas == 0) {
             System.out.println("No hay tareas para modificar\n");

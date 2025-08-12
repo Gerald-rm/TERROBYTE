@@ -15,7 +15,7 @@ static int totalTareas = 0;
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
 
-        System.out.println("===========Crear Tareas===========");
+        System.out.println("\n===========Crear Tareas===========");
 
     if (totalTareas >= Maximodetareas) {
         System.out.println("Haz alcanzado el limite de tareas.\n");

@@ -10,6 +10,9 @@ public class crearreporte {
         int indice = -1;
         boolean entradaValida = false;
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("\n=======Crear Reporte=======");
+
         String[] nombres = crearproyecto.getnombreproyecto();
         int total = crearproyecto.getTotalProyectos();
 

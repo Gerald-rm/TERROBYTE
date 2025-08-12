@@ -14,7 +14,7 @@ public class crearperfiles {
 
         String nombreCompleto;
 
-        System.out.println("=====Crear Perfiles=====");
+        System.out.println("\n=====Crear Perfiles=====");
 
         String nombre;//validar nombre
         while (true) {
@@ -27,7 +27,7 @@ public class crearperfiles {
             }
         }
 
-        String apellido;
+        String apellido;//validar apellido
         while (true) {
             System.out.print("Ingresa tu apellido: ");
             apellido = sc.nextLine().trim();
@@ -38,7 +38,7 @@ public class crearperfiles {
             }
         }
 
-        String correo;
+        String correo;//validar correo
         String [] dominiosP = {"@gmail.com", "@hotmail.com", "@outlook.com", "@yahoo.com", "@ut-tijuana.edu.mx"};
         while (true) {
             System.out.print("Ingrese tu correo: ");

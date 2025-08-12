@@ -5,7 +5,7 @@ public static void mostrarListadeproyectos() {
         String[] nombres = crearproyecto.getnombreproyecto();
         int total = crearproyecto.getTotalProyectos();
 
-        System.out.println("\n---PROYECTOS---");
+        System.out.println("\n=====Ver Proyectos=====");
 
         //revisa si hay proyectos que mostrar
         if (total == 0) {
