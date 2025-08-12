@@ -56,7 +56,6 @@ public class crearreporte {
         for (int i = 0; i < totalreportes; i++) {
             System.out.println(reportes[i]);
         }
-
     
     }
 }
