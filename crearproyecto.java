@@ -32,6 +32,7 @@ public static void main(String[] args) {
             System.out.println("Solo numeros.");
         }
     } while (!entradaValida);
+    System.out.println("==============================================");
     if (opcion == 1) {
         List<String> equiposDisponibles = crearequipo.Obtenernombres();
         for (int i = 0; i < equiposDisponibles.size(); i++){

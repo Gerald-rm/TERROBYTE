@@ -25,7 +25,7 @@ if [ $? -eq 0 ]; then
 
     if [[ "$respuesta" == "s" || "$respuesta" == "S" ]]; then
         echo "Ejecutando..."
-        java TERROBYTE
+        java login
     else
         echo "No se ejecutara"
     fi

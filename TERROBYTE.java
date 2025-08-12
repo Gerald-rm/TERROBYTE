@@ -33,6 +33,7 @@ public class TERROBYTE {
 
         do {
             System.out.println("\n=============Inicio=============");
+            System.out.println( "Ingrese un valor entre el 1-13");
             System.out.println("1.- Crear Perfil");
             System.out.println("2.- Crear Equipo");
             System.out.println("3.- Crear Proyecto");
@@ -44,8 +45,10 @@ public class TERROBYTE {
             System.out.println("9.- Ver Perfiles");
             System.out.println("10.- Ver Equipos");
             System.out.println("11.- Ver Proyectos");
-            System.out.println("12.- Salir del programa");
-            System.out.println("cambiar sesion 13");
+            System.out.println("12.- Ver Reportes ");
+            System.out.println("13.- cambiar sesion ");
+            System.out.println("14.- Salir del programa");
+           
             boolean entradaValida;
             String entrada;
             opcion = -85;
@@ -113,22 +116,27 @@ public class TERROBYTE {
                 verproyectos vpo = new verproyectos();
                 vpo.mostrarListadeproyectos();
                     break;
+            
                     case 12:
+                    verreportes lasreportes =new verreportes();
+                    lasreportes.main(args);
+                    break;
+                       case 13:
                     login ellogin =new login();
                     ellogin.main(args);
                     break;
 
-                    case 13: 
+                    case 14: 
                 System.exit(0);
                     break;
                              
 
                     default:
-                    System.out.println("Opcion incorrecta. Ingrese un valor entre el 1-13");
+                    System.out.println("Opcion incorrecta. Ingrese un valor entre el 1-14");
                     break;
                 }
     }
-        while (opcion != 13); //La condicion del bucle
+        while (opcion != 14); //La condicion del bucle
 
         sc.close();
     

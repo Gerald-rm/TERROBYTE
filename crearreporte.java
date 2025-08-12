@@ -58,4 +58,10 @@ public class crearreporte {
         }
     
     }
+    public static String[] getreportes(){
+        return reportes;
+    }
+    public static int gettotalreportes(){
+        return totalreportes;
+    }
 }
