@@ -5,6 +5,16 @@ public class crearreporte {
     static int maximor = 50;
     static String[] reportes = new String[maximor];
     static int totalreportes = 0;
+    // Reportes predeterminados para los 2 proyectos
+static {
+    crearproyecto.getTotalProyectos();
+
+    String[] proyectos = crearproyecto.getnombreproyecto();
+
+    reportes[totalreportes++] = "Reporte para " + proyectos[0] + ": hacer lo que sea necsario.";
+    reportes[totalreportes++] = "Reporte para " + proyectos[1] + ": No spikear spanish.";
+}
+
 
     public static void main(String[] args) {
         int indice = -1;
@@ -54,11 +64,7 @@ public class crearreporte {
             System.out.println("Se arrebaso el limite de reportes");
         }
 
-        // Para ver todos los reportes
-        System.out.println("\nLista de reportes");
-        for (int i = 0; i < totalreportes; i++) {
-            System.out.println(reportes[i]);
-        }
+    
     
     }
     public static String[] getreportes(){
