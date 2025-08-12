@@ -2,7 +2,7 @@ import java.util.List;
 
 public class verperfiles {
     public void mostrar() {
-        List<String> perfiles = crearperfiles.obtenerNombresPerfiles();
+        List<String> perfiles = crearperfiles.nombreCorreos();
 
         System.out.println("\n=====Lista de Perfiles=====");
         if (perfiles == null || perfiles.isEmpty()) {
