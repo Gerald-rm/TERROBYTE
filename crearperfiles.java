@@ -27,7 +27,7 @@ public class crearperfiles {
         while (true) {
             System.out.print("Ingresa tu nombre: ");
             nombre = sc.nextLine().trim();
-            if (nombre.matches("[abcdefghijklmnopqrstuvwxyzABCDEFJHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚñÑ ]+")) {
+            if (nombre.matches("[abcdefghijklmnopqrstuvwxyzABCDEFGJHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚñÑ ]+")) {
                 break;
             } else {
                 System.out.println("Nombre invalido. Solo se permiten letras y espacios.");
@@ -38,11 +38,19 @@ public class crearperfiles {
         while (true) {
             System.out.print("Ingresa tu apellido: ");
             apellido = sc.nextLine().trim();
-            if (apellido.matches("[abcdefghijklmnopqrstuvwxyzABCDEFJHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚñÑ ]+")) {
+            if (apellido.matches("[abcdefghijklmnopqrstuvwxyzABCDEFGJHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚñÑ ]+")) {
                 break;
             } else {
                 System.out.println("Apellido Invalido. Solo se permiten letras y espacis.");
             }
+        }
+        nombreCompleto = nombre + " " + apellido;
+        // Validar si el nombre completo ya existe
+        if (nombresPerfilesCreados.contains(nombreCompleto)) {
+            System.out.println("Ya existe un perfil con ese nombre y apellido.");
+            System.out.print("Presione Enter para continuar");
+            sc.nextLine();
+            return; // Salir del método para evitar crear perfil duplicado
         }
 
         String correo;//validar correo
@@ -70,7 +78,6 @@ public class crearperfiles {
         }
 
 
-        nombreCompleto = nombre + " " + apellido;
         String nomApllCorreo = nombre + " " + apellido + " \nCorreo: " + correo;
         nombresPerfilesCreados.add(nombreCompleto); // añade el nuevo perfil a la lista
         nombreYCorreos.add(nomApllCorreo);//anade el nombre completo y el correo
