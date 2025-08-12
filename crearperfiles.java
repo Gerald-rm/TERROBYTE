@@ -10,7 +10,12 @@ public class crearperfiles {
      static {
         nombresPerfilesCreados.add("Pinto GPT");
         nombresPerfilesCreados.add("Navy Lara");
-        nombresPerfilesCreados.add("Eduardo Tulane");}
+        nombresPerfilesCreados.add("Eduardo Tulane");
+    }
+    static{
+        nombreYCorreos.add("Pinto GPT \n");
+    }
+        
      
     // esta funcion es para crear el perfil, se supone que es mas facil para compartir con otras clases
     public void crearnuevoPerfil() {
