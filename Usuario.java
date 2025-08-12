@@ -34,15 +34,14 @@ public class Usuario {
             System.out.println("\n=============Inicio=============");
             System.out.println( "Ingrese un valor entre el 1-9");
             System.out.println("1.- Ver Tareas");
-            System.out.println("2.- Avances de tareas");
-            System.out.println("3.- Tablero Kanbam");
-            System.out.println("4.- Ver Perfiles");
-            System.out.println("5.- Ver Equipos");
-            System.out.println("6.- Ver Proyectos");
-            System.out.println("7.- Ver Reportes ");
-            System.out.println("8.- Manual de usuario");
-            System.out.println("9.- cambiar sesion ");
-            System.out.println("10.- Salir del programa");
+            System.out.println("2.- Tablero Kanbam");
+            System.out.println("3.- Ver Perfiles");
+            System.out.println("4.- Ver Equipos");
+            System.out.println("5.- Ver Proyectos");
+            System.out.println("6.- Ver Reportes ");
+            System.out.println("7.- Manual de usuario");
+            System.out.println("8.- cambiar sesion ");
+            System.out.println("9.- Salir del programa");
             boolean entradaValida;
             String entrada;
             opcion = -85;
@@ -68,41 +67,41 @@ public class Usuario {
                 vertareas mitareas = new vertareas();
                 mitareas.main();
                     break;
+               // case 2: 
+                //avancestareas avast = new avancestareas();
+                //avancestareas.modificarTarea();
+                //  break;
                 case 2: 
-                avancestareas avast = new avancestareas();
-                avancestareas.modificarTarea();
-                    break;
-                case 3: 
                 kanban tablero = new kanban();
                 kanban.tablero();
                     break;
                     
-                case 4:
+                case 3:
                 verperfiles vp = new verperfiles();
                 vp.mostrar();
                     break;
-                case 5:
+                case 4:
                 verequipos ve = new verequipos();
                 ve.mostrar();
                     break;
                
-                     case 6: 
+                     case 5: 
                 verproyectos vpo = new verproyectos();
                 vpo.mostrarListadeproyectos();
                     break;
-                    case 7:
+                    case 6:
                 verreportes lasreportes =new verreportes();
                 lasreportes.main(args);
                     break;
-                    case 8:
+                    case 7:
                     ManualU.main(args);
                     break;
-                       case 9:
+                       case 8:
                 login ellogin =new login();
                 ellogin.main(args);
                     break;
 
-                    case 10: 
+                    case 9: 
                 System.exit(0);
                     break;
 

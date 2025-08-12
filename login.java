@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
 public class login {
-    private static final String USUARIO = "admin";
+    private static final String USUARIO ="admin";
     private static final String PASS = "admin123";
 
     public static void main(String[] args) {
+        LogSetup.init("salida", false); // crea logs/salida.txt y guarda todo
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("========Inicio de Sesion========\n");

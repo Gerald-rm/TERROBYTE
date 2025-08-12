@@ -28,7 +28,11 @@ public class TERROBYTE {
         System.out.println("""
             TERROBYTE es un software dedicado a la gestion de tareas asi como su delegacion de actividades.
             El proposito inicial es que el administrador pueda facilitar la logica de una tarea para el usuario
-                
+
+            By: 
+            - Vargas juarez Rafael Alejandro.
+            - Gomez Camacho Karlo Gamaliel.   
+            - Aguilar Garcia David Gerardo.
                 """);
 
         do {
