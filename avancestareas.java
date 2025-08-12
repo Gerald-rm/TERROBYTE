@@ -12,7 +12,7 @@ public class avancestareas {
         System.out.println("\n=====Avance De Tareas=====");
 
         if (creartareas.totalTareas == 0) {
-            System.out.println("No hay tareas para modificar\n");
+            System.out.println("No hay tareas para modificar \n");
             return; //retorna al menu si no hay tareas lol
         }
 

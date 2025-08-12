@@ -22,7 +22,7 @@ static{
         miembrosTareas[totalTareas]= 2;
         fechasEntrega[totalTareas] = new Date(); // la fecha de hoy
         totalTareas++;
-         nombreTareas[totalTareas]  = "Hacer papeleo";
+         nombreTareas[totalTareas]  = "Hacer Examen probabilidad";
         estadoTareas[totalTareas]  = "Terminado";
         miembrosTareas[totalTareas]= 3;
         fechasEntrega[totalTareas] = new Date(); // la fecha de hoy
@@ -40,7 +40,7 @@ static{
    
     System.out.println("Ingresa el Nombre de la tarea: ");
     nombreTareas[totalTareas]= sc.nextLine();
-    System.out.println("Ingresa el estado de la Tarea (ej: Pendiente, En Proceso, Terminado)");
+    System.out.println("Ingresa el estado de la Tarea (ej: Pendiente, En Proceso, Terminado(escribir exactamente igual))");
     estadoTareas[totalTareas]=sc.nextLine();
 
     System.out.println("Miembros disponibles:");

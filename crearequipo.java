@@ -39,7 +39,7 @@ public class crearequipo {
             perfiles = crearperfiles.obtenerNombresPerfiles();
         }
 
-        System.out.print("Nombre del grupo: ");
+        System.out.print("Nombre del Equipo a crear: ");
         String nombredelGrupo=sc.nextLine();
         Nombres.add (nombredelGrupo);
 
@@ -48,7 +48,7 @@ public class crearequipo {
             System.out.println((i + 1) + ". " + perfiles.get(i));
         }
 
-        System.out.print("Selecciona los numeros de los miembros separados por comas (ej: 1,3): ");
+        System.out.print("Selecciona los numeros de los miembros separados por comas (ej: 1,2,3): ");
         String[] seleccion = sc.nextLine().split(",");
         List<String> miembros = new ArrayList<>();
 
@@ -59,7 +59,7 @@ public class crearequipo {
                     miembros.add(perfiles.get(index));
                 }
             } catch (NumberFormatException e) {
-                // Ignorar errores de conversión
+                // Ignorar errores de conversion
                 System.out.println("El numero no es valido");
             }
         }

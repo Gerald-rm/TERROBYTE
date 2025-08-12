@@ -31,7 +31,7 @@ public static void main(String[] args) {
         return;
         
     }    
-    System.out.println("Ingresa el Nombre del proyecto");
+    System.out.println("Ingresa el Nombre del proyecto a crear");
     nombreproyecto[totalproyectos]=sc.nextLine();
     System.out.println("Quieres asignar equipos?");
     int opcion = -666;
@@ -61,7 +61,7 @@ public static void main(String[] args) {
         
         System.out.println();
 
-        System.out.println("Elije el equipo disponible de la siguiente lista: ");
+        System.out.println("Elije el equipo disponible de la siguiente lista para asignarlo al proyecto: ");
         int equiposelect= sc.nextInt();
 
         // no me pregunten como solo se que funciona despues de ver videos de tryhard indios

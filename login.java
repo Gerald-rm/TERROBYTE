@@ -5,7 +5,7 @@ public class login {
     private static final String PASS = "admin123";
 
     public static void main(String[] args) {
-        LogSetup.init("salida", false); // crea logs/salida.txt y guarda todo
+        LogSetup.init("salida", false); // crea corrida.txt y guarda todo
 
         Scanner sc = new Scanner(System.in);
 
