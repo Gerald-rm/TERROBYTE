@@ -4,6 +4,8 @@ public static void mostrarListadeproyectos() {
         
         String[] nombres = crearproyecto.getnombreproyecto();
         int total = crearproyecto.getTotalProyectos();
+        String[] equipos = crearproyecto.getEquipoAsignado();
+
 
         System.out.println("\n=====Ver Proyectos=====");
 
@@ -15,7 +17,7 @@ public static void mostrarListadeproyectos() {
 
         //Recorre el array y muestra cada proyecto
         for (int i = 0; i < total; i++) {
-            System.out.println("Proyecto: " + nombres[i]);
+            System.out.println("Proyecto: " + nombres[i]+" / Equipo: "+equipos[i]);
         }
 
     }

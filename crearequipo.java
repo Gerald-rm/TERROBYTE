@@ -8,6 +8,24 @@ public class crearequipo {
     private static List<List<String>> equipos = new ArrayList<>();
 
     private static List<String> Nombres = new ArrayList<>();
+    // equipos predeterminados
+    static {
+        List<String> perfiles = crearperfiles.obtenerNombresPerfiles();
+
+        // Equipo Temach hasta la muerte brrrr
+        List<String> equipo1 = new ArrayList<>();
+        equipo1.add(perfiles.get(0));
+        equipo1.add(perfiles.get(1));
+        equipos.add(equipo1);
+        Nombres.add("Equipo Temach");
+
+        // Equipo dani rep
+        List<String> equipo2 = new ArrayList<>();
+        equipo2.add(perfiles.get(2));
+        equipos.add(equipo2);
+        Nombres.add("Equipo Danirep");
+    }
+
 
     public void crearGrupo() {
         Scanner sc = new Scanner(System.in);

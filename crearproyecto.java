@@ -3,7 +3,23 @@ import java.util.List;
 public class crearproyecto {
     static int Maximodeproyectos=50;
     static String[] nombreproyecto = new String[Maximodeproyectos];
+    static String[] equipoasig = new String[Maximodeproyectos];
     static int totalproyectos =0;
+    static List<String> nombres = crearequipo.Obtenernombres();
+
+
+     // Proyectos predeterminados
+    static {
+        // Proyecto 1
+        nombreproyecto[totalproyectos] = "Pasar Con teacher Emer";
+        equipoasig[totalproyectos] = nombres.get(0);
+        totalproyectos++;
+
+        // Proyecto 2
+        nombreproyecto[totalproyectos] = "Pasar Ingles";
+        equipoasig[totalproyectos] = nombres.get(1);
+        totalproyectos++;
+    }
 public static void main(String[] args) {
 
     
@@ -87,5 +103,9 @@ public static String[] getnombreproyecto() {
  public static int getTotalProyectos() {
         return totalproyectos;
     }
+    public static String[] getEquipoAsignado() {
+    return equipoasig;
+}
+
     
 }
