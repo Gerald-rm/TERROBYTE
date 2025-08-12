@@ -40,8 +40,9 @@ public class Usuario {
             System.out.println("5.- Ver Equipos");
             System.out.println("6.- Ver Proyectos");
             System.out.println("7.- Ver Reportes ");
-            System.out.println("8.- cambiar sesion ");
-            System.out.println("9.- Salir del programa");
+            System.out.println("8.- Manual de usuario");
+            System.out.println("9.- cambiar sesion ");
+            System.out.println("10.- Salir del programa");
             boolean entradaValida;
             String entrada;
             opcion = -85;
@@ -93,12 +94,15 @@ public class Usuario {
                 verreportes lasreportes =new verreportes();
                 lasreportes.main(args);
                     break;
-                       case 8:
+                    case 8:
+                    ManualU.main(args);
+                    break;
+                       case 9:
                 login ellogin =new login();
                 ellogin.main(args);
                     break;
 
-                    case 9: 
+                    case 10: 
                 System.exit(0);
                     break;
 

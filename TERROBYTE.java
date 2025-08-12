@@ -33,7 +33,7 @@ public class TERROBYTE {
 
         do {
             System.out.println("\n=============Inicio=============");
-            System.out.println( "Ingrese un valor entre el 1-14");
+            System.out.println( "Ingrese un valor entre el 1-15");
             System.out.println("1.- Crear Perfil");
             System.out.println("2.- Crear Equipo");
             System.out.println("3.- Crear Proyecto");
@@ -46,8 +46,9 @@ public class TERROBYTE {
             System.out.println("10.- Ver Equipos");
             System.out.println("11.- Ver Proyectos");
             System.out.println("12.- Ver Reportes ");
-            System.out.println("13.- cambiar sesion ");
-            System.out.println("14.- Salir del programa");
+            System.out.println("13.- Manual de usuario");
+            System.out.println("14.- cambiar sesion ");
+            System.out.println("15.- Salir del programa");
            
             boolean entradaValida;
             String entrada;
@@ -121,12 +122,16 @@ public class TERROBYTE {
                     verreportes lasreportes =new verreportes();
                     lasreportes.main(args);
                     break;
-                       case 13:
+
+                    case 13:
+                    Manual.main(new String[0]);
+                    break;
+                       case 14:
                     login ellogin =new login();
                     ellogin.main(args);
                     break;
 
-                    case 14: 
+                    case 15: 
                 System.exit(0);
                     break;
                              
