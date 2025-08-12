@@ -54,7 +54,6 @@ public class login {
             TERROBYTE.main(new String[0]);
         }
 
-        sc.close();
     }
 }
 
