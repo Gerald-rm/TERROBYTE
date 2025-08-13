@@ -111,31 +111,35 @@ public class GuardarDatos {
                 }
             }
             writer.println("\n");
-                        // kanban
-            writer.println("---------- TABLA KANBAN ----------");
+                    
+            //  Tabla Kanban 
+            writer.println("------- TABLA KANBAN -------");
             writer.println();
 
-            // las tareas en  "TODO"
-            writer.println("TODO:");
+            // guarda las tareas en pendiente
+            writer.println("PENDIENTE:");
             for (int i = 0; i < totalTareas; i++) {
-                if (estadosTareas[i].equalsIgnoreCase("TODO")) {
+                // por si o escriben mal
+                if (estadosTareas[i].equalsIgnoreCase("PENDIENTE") || estadosTareas[i].equalsIgnoreCase("TODO")) {
                     writer.println("- " + nombresTareas[i]);
                 }
             }
             writer.println();
 
-            // las tareas en"EN PROGRESO"
-            writer.println("EN PROGRESO:");
+            // guarda tareas en proceso
+            writer.println("EN PROCESO:");
             for (int i = 0; i < totalTareas; i++) {
-                if (estadosTareas[i].equalsIgnoreCase("EN PROGRESO")) {
+                // pa las mayusculas y asi
+                if (estadosTareas[i].equalsIgnoreCase("EN PROCESO")) {
                     writer.println("- " + nombresTareas[i]);
                 }
             }
             writer.println();
 
-            // las tareas en  "TERMINADO"
+            // tareas en terminado
             writer.println("TERMINADO:");
             for (int i = 0; i < totalTareas; i++) {
+                // los musmo
                 if (estadosTareas[i].equalsIgnoreCase("TERMINADO")) {
                     writer.println("- " + nombresTareas[i]);
                 }
