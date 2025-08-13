@@ -42,7 +42,7 @@ public class crearequipo {
         System.out.print("Nombre del grupo: ");
         String nombredelGrupo=sc.nextLine();
         Nombres.add (nombredelGrupo);
-
+        
         System.out.println("Perfiles disponibles:");
         for (int i = 0; i < perfiles.size(); i++) {
             System.out.println((i + 1) + ". " + perfiles.get(i));
