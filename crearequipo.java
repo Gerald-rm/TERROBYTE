@@ -39,16 +39,26 @@ public class crearequipo {
             perfiles = crearperfiles.obtenerNombresPerfiles();
         }
 
-        System.out.print("Nombre del Equipo a crear: ");
-        String nombredelGrupo=sc.nextLine();
-        Nombres.add (nombredelGrupo);
+        String nombredelGrupo;
+        while (true) {
+            System.out.print("Nombre del grupo: ");
+            nombredelGrupo = sc.nextLine();
 
+            if (Nombres.contains(nombredelGrupo)) {
+                System.out.println("Ese nombre de equipo ya está en uso, intenta con otro.");
+            } else {
+                Nombres.add(nombredelGrupo);
+                break; // salir del bucle si es válido
+        }
+    }
+
+        
         System.out.println("Perfiles disponibles:");
         for (int i = 0; i < perfiles.size(); i++) {
             System.out.println((i + 1) + ". " + perfiles.get(i));
         }
 
-        System.out.print("Selecciona los numeros de los miembros separados por comas (ej: 1,2,3): ");
+        System.out.print("Selecciona los numeros de los miembros separados por comas (ej: 1,3): ");
         String[] seleccion = sc.nextLine().split(",");
         List<String> miembros = new ArrayList<>();
 
@@ -59,7 +69,7 @@ public class crearequipo {
                     miembros.add(perfiles.get(index));
                 }
             } catch (NumberFormatException e) {
-                // Ignorar errores de conversion
+                // Ignorar errores de conversión
                 System.out.println("El numero no es valido");
             }
         }

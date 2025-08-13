@@ -36,23 +36,28 @@ public class TERROBYTE {
                 """);
 
         do {
-            System.out.println("\n=============Inicio=============");
-            System.out.println( "Ingrese un valor entre el 1-15");
-            System.out.println("1.- Crear Perfil");
-            System.out.println("2.- Crear Equipo");
-            System.out.println("3.- Crear Proyecto");
-            System.out.println("4.- Crear Tareas");
-            System.out.println("5.- Crear Reportes");
-            System.out.println("6.- Ver Tareas");
-            System.out.println("7.- Avances de tareas");
-            System.out.println("8.- Tablero Kanbam");
-            System.out.println("9.- Ver Perfiles");
-            System.out.println("10.- Ver Equipos");
-            System.out.println("11.- Ver Proyectos");
-            System.out.println("12.- Ver Reportes ");
-            System.out.println("13.- Manual de usuario");
-            System.out.println("14.- cambiar sesion ");
-            System.out.println("15.- Guardar datos / Salir del programa");
+            System.out.println(" __________________________________");
+            System.out.println("|            Inicio                |");
+            System.out.println("|==================================|");
+            System.out.println("|Ingrese un valor entre el 1-15    |");
+            System.out.println("|==================================|");
+            System.out.println("| 1.- Crear Perfil                 |");
+            System.out.println("| 2.- Crear Equipo                 |");
+            System.out.println("| 3.- Crear Proyecto               |");
+            System.out.println("| 4.- Crear Tareas                 |");
+            System.out.println("| 5.- Crear Reportes               |");
+            System.out.println("| 6.- Ver Tareas                   |");
+            System.out.println("| 7.- Avances de tareas            |");
+            System.out.println("| 8.- Tablero Kanbam               |");
+            System.out.println("| 9.- Ver Perfiles                 |");
+            System.out.println("| 10.- Ver Equipos                 |");
+            System.out.println("| 11.- Ver Proyectos               |");
+            System.out.println("| 12.- Ver Reportes                |");
+            System.out.println("| 13.- Manual de usuario           |");
+            System.out.println("| 14.- cambiar sesion              |");
+            System.out.println("| 15.- Guardar / Salir del programa|");
+            System.out.println("|__________________________________|"); 
+
            
             boolean entradaValida;
             String entrada;

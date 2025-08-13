@@ -33,6 +33,9 @@ public static void main(String[] args) {
     }    
     System.out.println("Ingresa el Nombre del proyecto a crear");
     nombreproyecto[totalproyectos]=sc.nextLine();
+
+
+    
     System.out.println("Quieres asignar equipos?");
     int opcion = -666;
     boolean entradaValida = false;
