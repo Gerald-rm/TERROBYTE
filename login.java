@@ -5,7 +5,7 @@ public class login {
     private static final String PASS = "admin123";
 
     public static void main(String[] args) {
-        LogSetup.init("salida", false); // crea corrida.txt y guarda todo
+       
 
         Scanner sc = new Scanner(System.in);
 
@@ -44,6 +44,7 @@ public class login {
                 String usuario = sc.nextLine().trim();
 
                 System.out.print("Ingresa tu Contraseña: ");
+
                 String contra = sc.nextLine();
 
                 paso = USUARIO.equals(usuario) && PASS.equals(contra);

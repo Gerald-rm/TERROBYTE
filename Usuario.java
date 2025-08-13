@@ -41,7 +41,7 @@ public class Usuario {
             System.out.println("6.- Ver Reportes ");
             System.out.println("7.- Manual de usuario");
             System.out.println("8.- cambiar sesion ");
-            System.out.println("9.- Salir del programa");
+            System.out.println("9.- Guardar Datos/ Salir del programa");
             boolean entradaValida;
             String entrada;
             opcion = -85;
@@ -102,6 +102,7 @@ public class Usuario {
                     break;
 
                     case 9: 
+                    GuardarDatos.guardarReporteCompleto();
                 System.exit(0);
                     break;
 

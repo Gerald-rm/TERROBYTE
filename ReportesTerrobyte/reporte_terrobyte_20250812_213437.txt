@@ -1,0 +1,62 @@
+===== REPORTE COMPLETO DEL PROYECTO TERROBYTE =====
+Fecha y Hora del Reporte: 12/08/2025 21:34:37
+
+
+--- PERFILES DE USUARIO ---
+Pinto GPT 
+correo: pintohomeless@gmail.com
+Naivy Lara 
+correo: navycorp@ut-tijuana.com
+Eduardo Tulane 
+correo: edduardotulipanes@hotmail.com
+
+
+--- EQUIPOS CREADOS ---
+Equipo: Equipo Temach
+Miembros: [Pinto GPT, Navy Lara]
+
+Equipo: Equipo Danirep
+Miembros: [Eduardo Tulane]
+
+
+
+--- PROYECTOS ---
+Proyecto: Pasar Con teacher Emer
+Equipo Asignado: Equipo Temach
+
+Proyecto: Pasar Ingles
+Equipo Asignado: Equipo Danirep
+
+
+
+--- TAREAS ---
+Tarea: Comprar sodas
+Estado: Pendiente
+Miembro Asignado: Pinto GPT
+Fecha de Entrega: 12/08/2025
+
+Tarea: Pasear al perro
+Estado: En Proceso
+Miembro Asignado: Navy Lara
+Fecha de Entrega: 12/08/2025
+
+Tarea: Hacer Examen probabilidad
+Estado: Terminado
+Miembro Asignado: Eduardo Tulane
+Fecha de Entrega: 12/08/2025
+
+
+
+--- TABLA KANBAN ---
+
+TODO:
+
+EN PROGRESO:
+
+TERMINADO:
+- Hacer Examen probabilidad
+
+
+--- REPORTES ---
+Reporte para Pasar Con teacher Emer: hacer lo que sea necsario.
+Reporte para Pasar Ingles: No spikear spanish.
