@@ -55,48 +55,40 @@ public static void main(String[] args) {
         }
     } while (!entradaValida);
     System.out.println("==============================================");
-    if (opcion == 1) {
+        if (opcion == 1) {
         List<String> equiposDisponibles = crearequipo.Obtenernombres();
-        for (int i = 0; i < equiposDisponibles.size(); i++){
+        for (int i = 0; i < equiposDisponibles.size(); i++) {
             System.out.println((i + 1) + ": " + equiposDisponibles.get(i));
-    
         }
+
+        int equiposelect = -1;
+        boolean equipoValido = false;
         
-        System.out.println();
-
-        System.out.println("Elije el equipo disponible de la siguiente lista para asignarlo al proyecto: ");
-        int equiposelect= sc.nextInt();
-
-        // no me pregunten como solo se que funciona despues de ver videos de tryhard indios
-        if (equiposelect > 0 && equiposelect <= equiposDisponibles.size()){
-            //para que en la lista este el uusuario que elijas
-           //String equipoasig = equiposDisponibles.get(equiposelect - 1);
-           equipoasig[totalproyectos] = equiposDisponibles.get(equiposelect - 1);
-
-           //para coseguir un indice de la lista
-           sc.nextLine();
-
-
-            System.out.println("Proyecto "+nombreproyecto[totalproyectos]+" creado exitosamente");
-
-
-           System.out.println("Equipo: "+equipoasig[totalproyectos]+" fue asignado");
-
-
-        }else if(equiposelect==0){
-            System.out.println("El numero no puede ser cero por que no esta en la lista");
-
+        while (!equipoValido) {
+            System.out.println("Elige el numero del equipo disponible para asignarlo al proyecto:");
+            try {
+                equiposelect = Integer.parseInt(sc.nextLine());
+                if (equiposelect > 0 && equiposelect <= equiposDisponibles.size()) {
+                    equipoasig[totalproyectos] = equiposDisponibles.get(equiposelect - 1);
+                    equipoValido = true; // Salir del bucle si la opción es válida
+                    System.out.println("Equipo asignado: " + equipoasig[totalproyectos]);
+                } else {
+                    System.out.println("Numero de equipo inválido. Ingresa un número entre 1 y " + equiposDisponibles.size());
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Por favor ingresa un numero valido.");
+            }
         }
-        else{
-            System.out.println("Hubo un error al asignar el equipo.");
-        }
-        
 
-        
+        System.out.println("Proyecto " + nombreproyecto[totalproyectos] + " creado exitosamente.");
+        System.out.println("Equipo: " + equipoasig[totalproyectos] + " fue asignado");
     } else {
-        System.out.println("No se asignara ninguno ps ;(");
-         equipoasig[totalproyectos] = "Sin equipo";
+        equipoasig[totalproyectos] = "Sin equipo";
+        System.out.println("No se asignara equipo.");
     }
+
+            
+    
     totalproyectos++;
 
 
