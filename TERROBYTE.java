@@ -55,7 +55,7 @@ public class TERROBYTE {
             System.out.println("| 12.- Ver Reportes                |");
             System.out.println("| 13.- Manual de usuario           |");
             System.out.println("| 14.- cambiar sesion              |");
-            System.out.println("| 15.- Salir del programa          |");
+            System.out.println("| 15.- Guardar / Salir del programa|");
             System.out.println("|__________________________________|"); 
 
            
