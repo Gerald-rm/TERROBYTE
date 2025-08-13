@@ -12,7 +12,7 @@ public class crearequipo {
     static {
         List<String> perfiles = crearperfiles.obtenerNombresPerfiles();
 
-        // Equipo Temach hasta la muerte brrrr
+        // Equipo Temach hasta
         List<String> equipo1 = new ArrayList<>();
         equipo1.add(perfiles.get(0));
         equipo1.add(perfiles.get(1));

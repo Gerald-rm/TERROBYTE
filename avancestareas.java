@@ -44,7 +44,7 @@ public class avancestareas {
         
         System.out.print("Ingrese el nuevo nombre (deja en blanco para no cambiar): ");
         String nuevoNombre = sc.nextLine();
-        //segun david esta peculiar
+    
         if (!nuevoNombre.isEmpty()) {
             creartareas.nombreTareas[indice] = nuevoNombre;
              // Modifica el array nombretareas de creartareas
@@ -52,7 +52,7 @@ public class avancestareas {
 
         System.out.print("Ingrese el nuevo estado (deja en blanco para no cambiar): ");
         String nuevoEstado = sc.nextLine();
-        //Peculiar 2        
+              
         if (!nuevoEstado.isEmpty()) {
             creartareas.estadoTareas[indice] = nuevoEstado;
              // Modifica el array nombretareas de creartareas

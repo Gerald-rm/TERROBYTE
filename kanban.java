@@ -39,10 +39,10 @@ public class kanban{
     int maxi = Math.max(pendiente,Math.max(enproceso,terminada));
     //en base al estado que mas se repita determina la altura del tablero, .max compara la cantidad de estados
     int columna = 3;
-    //aqui determino cuantas columnas horizontales quiero que mi tablero tenga lol, el conteo empieza desde el cero aparentemente
+    //aqui determino cuantas columnas horizontales quiero que mi tablero tenga, el conteo empieza desde el cero
 
     String [][] tabla = new String[maxi][columna];
-    //aqui se crea la matriz xd
+    //aqui se crea la matriz
 
     int columnapendiente = 0;
     int columnaproceso = 0;
@@ -52,7 +52,7 @@ public class kanban{
     for (int i = 0; i <todastareas;i++){
         String nombreMiembro = "No hay miembros";
         int miembros = indice[i]-1;
-        //creo que se resta porque esta empezaba en cero
+    
         if (miembros >= 0 && miembros <lista.size()){
             nombreMiembro = lista.get(miembros);
             //consulta a los miembros a los que se les asigno una tarea, el if se ejecuta si hay por lo menos un miembro y si hay por lo menos un miembro al que se la asigno la tarea
@@ -60,7 +60,7 @@ public class kanban{
         }
         String fecha = (fechas[i]!=null) ? new SimpleDateFormat("dd-MM-yyyy").format(fechas[i]):"Sin fecha";
         //consulta las fechas asignadas a las tareas y les da el formato ej:2005-09-25
-        //si a la tarea no se le asigno ninguna fecha (null), simplemente imprime "Sin fecha" ('?' es como un if-else xd, los dos puntos se usan para separar los condicionales)
+        //si a la tarea no se le asigno ninguna fecha (null), simplemente imprime "Sin fecha" ('?' es como un if-else , los dos puntos se usan para separar los condicionales)
         String plantilla = String.format("%s, Miembro: %s, Entrega: %s", nombres[i],nombreMiembro,fecha);
         //'%s' es en donde se van a ubicar los strings a los que se les va a aplicar el formato
         String estado = estados[i];
@@ -79,19 +79,19 @@ public class kanban{
     }
 
     String formato = "|  %-70s | %-70s | %70s  |\n";
-    //se le asignan 60 caracteres de espacio entre string xd
+    //se le asignan 60 caracteres de espacio entre string 
     System.out.println("\n============================================================================================================ Kanban ===========================================================================================================");
     //le spam signo igual xd
     System.out.printf(formato,"Pendiente","En Proceso","Terminado");
-    //printf: impresion con fossrmato lol
+    //printf: impresion con fossrmato
     //pstt: no me pidan que le ponga 'Por hacer', 'En p4rogreso' y 'Hecho', literalmente son sinonimos y tambien tendrian que modificar las demas clases solo para eso
     System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
     for (int i =0; i<maxi;i++){
         String columna1 = (tabla[i][0]!=null) ? tabla[i][0]:"";
         //bascamente nos dice que la tabla empieza en la posicion '0' y avanza a partir de ahi, si en esa posicion no hay nada, solo imprime algo vacio
-        //se repite la misma logica para las demas columnas xd
-        //pstt: no David, no voy a hacer un if para que no imprima absolutamente nada, que hueva.
+        //se repite la misma logica para las demas columnas
+    
         String columna2 = (tabla[i][1]!=null) ? tabla[i][1]:"";
         String columna3 = (tabla[i][2]!=null) ? tabla[i][2]:"";
 
