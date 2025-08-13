@@ -54,7 +54,7 @@ public class crearperfiles {
             System.out.println("Ya existe un perfil con ese nombre y apellido.");
             System.out.print("Presione Enter para continuar");
             sc.nextLine();
-            return; // Salir del método para evitar crear perfil duplicado
+            return; // Salir del metodo para evitar crear perfil duplicado
         }
 
         String correo;//validar correo
