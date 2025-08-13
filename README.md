@@ -23,7 +23,7 @@ Todos los datos de que se generen al crear equipos, Proyectos, Tareas,etc. Se gu
 
  # Linux
  en caso de ejecutar en linux.
- ejecutar el "script.sh" en caso de que tengas actualizado el java.
+ ejecutar el "script.sh" en caso de que tengas actualizado el java. En terminal.
 
 
  muchas gracias.....
