@@ -70,10 +70,10 @@ public static void main(String[] args) {
                 equiposelect = Integer.parseInt(sc.nextLine());
                 if (equiposelect > 0 && equiposelect <= equiposDisponibles.size()) {
                     equipoasig[totalproyectos] = equiposDisponibles.get(equiposelect - 1);
-                    equipoValido = true; // Salir del bucle si la opción es válida
+                    equipoValido = true; //condicion para Salir del bucle si la opcion es válida
                     System.out.println("Equipo asignado: " + equipoasig[totalproyectos]);
                 } else {
-                    System.out.println("Numero de equipo inválido. Ingresa un número entre 1 y " + equiposDisponibles.size());
+                    System.out.println("Numero de equipo invalido. Ingresa un numero entre 1 y " + equiposDisponibles.size());
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Por favor ingresa un numero valido.");
