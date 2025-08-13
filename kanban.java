@@ -78,14 +78,14 @@ public class kanban{
         }
     }
 
-    String formato = "| %-60s | %-60s | %60s |\n";
+    String formato = "|  %-70s | %-70s | %70s  |\n";
     //se le asignan 60 caracteres de espacio entre string xd
-    System.out.println("\n=========================================================================================== Kanban ===========================================================================================");
+    System.out.println("\n============================================================================================================ Kanban ===========================================================================================================");
     //le spam signo igual xd
     System.out.printf(formato,"Pendiente","En Proceso","Terminado");
     //printf: impresion con fossrmato lol
     //pstt: no me pidan que le ponga 'Por hacer', 'En p4rogreso' y 'Hecho', literalmente son sinonimos y tambien tendrian que modificar las demas clases solo para eso
-    System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+    System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
     for (int i =0; i<maxi;i++){
         String columna1 = (tabla[i][0]!=null) ? tabla[i][0]:"";
@@ -99,7 +99,7 @@ public class kanban{
         //la logica es la siguiente: se ingresa la variable que contiene el formato con el que se va a imprimir,
         //luego se agregan las variables a las que se les va a aplicar el formato y ya
     }
-    System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+    System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
 }
 }

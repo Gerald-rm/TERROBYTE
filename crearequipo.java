@@ -57,22 +57,29 @@ public class crearequipo {
         for (int i = 0; i < perfiles.size(); i++) {
             System.out.println((i + 1) + ". " + perfiles.get(i));
         }
-
-        System.out.print("Selecciona los numeros de los miembros separados por comas (ej: 1,3): ");
-        String[] seleccion = sc.nextLine().split(",");
+        
         List<String> miembros = new ArrayList<>();
+        while (miembros.isEmpty()) {
+            System.out.print("Selecciona los numeros de los miembros separados por comas (ej: 1,3): ");
+            String[] seleccion = sc.nextLine().split(",");
+            miembros.clear();
 
-        for (String s : seleccion) {
-            try {
-                int index = Integer.parseInt(s.trim()) - 1;
-                if (index >= 0 && index < perfiles.size()) {
-                    miembros.add(perfiles.get(index));
+            for (String s : seleccion) {
+                try {
+                    int index = Integer.parseInt(s.trim()) - 1;
+                    if (index >= 0 && index < perfiles.size()) {
+                        miembros.add(perfiles.get(index));
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Número no válido: " + s.trim());
                 }
-            } catch (NumberFormatException e) {
-                // Ignorar errores de conversión
-                System.out.println("El numero no es valido");
+            }
+
+            if (miembros.isEmpty()) {
+                System.out.println("No se seleccionó ningún miembro válido, intenta de nuevo.\n");
             }
         }
+
 
         if (!miembros.isEmpty()) {
             equipos.add(miembros); //guardar equipos
