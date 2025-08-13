@@ -11,13 +11,13 @@ import java.io.File;
 public class GuardarDatos {
 
     public static void guardarReporteCompleto() {
-        // Define la ruta de la carpeta donde se guardarán los reportes
+        // ruta
         String rutaCarpeta = "ReportesTerrobyte/";
 
         // Crea el objeto File para la carpeta
         File carpeta = new File(rutaCarpeta);
 
-        // Si la carpeta no existe, la crea automáticamente
+        // para crear carpeta
         if (!carpeta.exists()) {
             boolean carpetaCreada = carpeta.mkdir();
             if (carpetaCreada) {
@@ -26,19 +26,20 @@ public class GuardarDatos {
         }
 
         String fecha = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-        // Combina la ruta de la carpeta con el nombre del archivo
-        String nombreArchivo = rutaCarpeta + "reporte_terrobyte_" + fecha + ".txt";
+        // Conbina la ruta de la carpeta con el nombre del archivo
+        String nombreArchivo = rutaCarpeta + "reporte_Terrobyte_" + fecha + ".txt";
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(nombreArchivo))) {
             writer.println("===== REPORTE COMPLETO DEL PROYECTO TERROBYTE =====");
             writer.println("Fecha y Hora del Reporte: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
             writer.println("\n");
 
-            // --- Guardar Perfiles ---
-            writer.println("--- PERFILES DE USUARIO ---");
+            // Guardar perfiles
+            writer.println("---------- PERFILES DE USUARIO ----------");
             List<String> nombresCompletos = crearperfiles.nombreCorreos();
             if (nombresCompletos.isEmpty()) {
                 writer.println("No hay perfiles de usuario creados.");
+                //siempre hay perfiles pero ps ya que
             } else {
                 for (String perfil : nombresCompletos) {
                     writer.println(perfil);
@@ -46,12 +47,13 @@ public class GuardarDatos {
             }
             writer.println("\n");
 
-            // --- Guardar Equipos ---
-            writer.println("--- EQUIPOS CREADOS ---");
+            //Guardar Equipos
+            writer.println("--------- EQUIPOS CREADOS ----------");
             List<String> nombresEquipos = crearequipo.Obtenernombres();
             List<List<String>> equipos = crearequipo.obtenerEquipos();
             if (nombresEquipos.isEmpty()) {
                 writer.println("No hay equipos creados.");
+                //tambien siempre hay equipos
             } else {
                 for (int i = 0; i < nombresEquipos.size(); i++) {
                     writer.println("Equipo: " + nombresEquipos.get(i));
@@ -61,13 +63,14 @@ public class GuardarDatos {
             }
             writer.println("\n");
 
-            // --- Guardar Proyectos ---
-            writer.println("--- PROYECTOS ---");
+            // Guardar Proyectos
+            writer.println("------------ PROYECTOS ------------");
             int totalProyectos = crearproyecto.getTotalProyectos();
             String[] nombresProyectos = crearproyecto.getnombreproyecto();
             String[] equiposAsignados = crearproyecto.getEquipoAsignado();
             if (totalProyectos == 0) {
-                writer.println("No hay proyectos creados.");
+                writer.println("No hay proyectos creados");
+                //siempre hay proyectos pero por si las dudas
             } else {
                 for (int i = 0; i < totalProyectos; i++) {
                     writer.println("Proyecto: " + nombresProyectos[i]);
@@ -88,6 +91,8 @@ public class GuardarDatos {
 
             if (totalTareas == 0) {
                 writer.println("No hay tareas creadas.");
+                //siempre hay
+        
             } else {
                 SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
                 for (int i = 0; i < totalTareas; i++) {
@@ -106,11 +111,11 @@ public class GuardarDatos {
                 }
             }
             writer.println("\n");
-                        // --- Guardar Tabla Kanban ---
-            writer.println("--- TABLA KANBAN ---");
+                        // kanban
+            writer.println("---------- TABLA KANBAN ----------");
             writer.println();
 
-            // Filtra y guarda las tareas en estado "TODO"
+            // las tareas en  "TODO"
             writer.println("TODO:");
             for (int i = 0; i < totalTareas; i++) {
                 if (estadosTareas[i].equalsIgnoreCase("TODO")) {
@@ -119,7 +124,7 @@ public class GuardarDatos {
             }
             writer.println();
 
-            // Filtra y guarda las tareas en estado "EN PROGRESO"
+            // las tareas en"EN PROGRESO"
             writer.println("EN PROGRESO:");
             for (int i = 0; i < totalTareas; i++) {
                 if (estadosTareas[i].equalsIgnoreCase("EN PROGRESO")) {
@@ -128,7 +133,7 @@ public class GuardarDatos {
             }
             writer.println();
 
-            // Filtra y guarda las tareas en estado "TERMINADO"
+            // las tareas en  "TERMINADO"
             writer.println("TERMINADO:");
             for (int i = 0; i < totalTareas; i++) {
                 if (estadosTareas[i].equalsIgnoreCase("TERMINADO")) {
@@ -137,12 +142,13 @@ public class GuardarDatos {
             }
             writer.println("\n");
 
-            // --- Guardar Reportes ---
-            writer.println("--- REPORTES ---");
+            //guardar reportes
+            writer.println("---------- REPORTES -----------");
             int totalReportes = crearreporte.gettotalreportes();
             String[] reportes = crearreporte.getreportes();
             if (totalReportes == 0) {
                 writer.println("No hay reportes creados.");
+                //siempre hay
             } else {
                 for (int i = 0; i < totalReportes; i++) {
                     writer.println(reportes[i]);
@@ -152,7 +158,7 @@ public class GuardarDatos {
             System.out.println("Reporte completo guardado en: " + nombreArchivo);
 
         } catch (IOException e) {
-            System.err.println("Ocurrio un error al escribir en el archivo: " + e.getMessage());
+            System.err.println("No se va a poder padrino,Ocurrio un error al escribir en el archivo: " + e.getMessage());
         }
     }
 }
