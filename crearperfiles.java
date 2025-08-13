@@ -45,7 +45,7 @@ public class crearperfiles {
             if (apellido.matches("[abcdefghijklmnopqrstuvwxyzABCDEFGJHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚñÑ ]+")) {
                 break;
             } else {
-                System.out.println("Apellido Invalido. Solo se permiten letras y espacis.");
+                System.out.println("Apellido Invalido. Solo se permiten letras y espacios.");
             }
         }
         nombreCompleto = nombre + " " + apellido;
